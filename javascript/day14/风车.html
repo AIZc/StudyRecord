@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    .fc-wrapper{
+        width: 300px;
+        height: 300px;
+        position: relative;
+        margin:100px auto;
+        animation: fc 1.5s linear infinite;
+    }
+    .fc{
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        background-color: green;
+        position: absolute;
+    }
+    .fc:nth-child(1){
+        top: 0;
+        left: 0;
+
+        border-radius: 0 150px 0 150px;
+    }
+    .fc:nth-child(2){
+        top: 0;
+        right: 0;
+
+        border-radius: 150px 0 150px 0;
+    }
+    .fc:nth-child(3){
+        bottom: 0;
+        left: 0;
+
+        border-radius: 150px 0 150px 0;
+    }
+    .fc:nth-child(4){
+        bottom: 0;
+        right: 0;
+        border-radius: 0 150px 0 150px;
+    }
+    
+    @keyframes fc {
+        0%{
+            transform:rotate(0);
+        }
+        100%{
+            transform:rotate(360deg);
+        }
+    }
+
+    input{
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        font-size: 30px;
+    }
+</style>
+<body>
+<div class="fc-wrapper">
+    <div class="fc"></div>
+    <div class="fc"></div>
+    <div class="fc"></div>
+    <div class="fc"></div>
+</div>
+<input type="button" value="转/停">
+<script>
+    window.onload = function () {
+        var fcsf = document.querySelector('.fc-wrapper')
+        var btn = document.querySelector('input')
+        var flag = 'true'
+        btn.onclick = function () {
+            if(flag){
+                fcsf.style.animationPlayState = 'paused'
+            }else{
+                fcsf.style.animationPlayState = 'running'
+            }
+            flag = !flag
+        }
+    }
+</script>
+</body>
+
+</html>

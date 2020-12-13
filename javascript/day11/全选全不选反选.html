@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button>全选</button>
+<button>全不选</button>
+<button>反选</button>
+<input type="checkbox"> 唱歌
+<input type="checkbox"> 唱歌
+<input type="checkbox"> 唱歌
+<input type="checkbox"> 唱歌
+<input type="checkbox"> 唱歌
+<input type="checkbox"> 唱歌
+</body>
+<script>
+    window.onload = function () {
+        var btns = document.querySelectorAll('button')
+        var inputs = document.querySelectorAll('input')
+        btns[0].onclick = function () {
+            for(let i=0;i<inputs.length;i++){
+                if (inputs[i].checked === false){
+                    inputs[i].checked = true
+                }
+            }
+        }
+        btns[1].onclick = function (){
+            for(let i=0;i<inputs.length;i++){
+                if (inputs[i].checked===true){
+                    inputs[i].checked = false
+                }
+            }
+        }
+        btns[2].onclick = function () {
+            for(let i=0;i<inputs.length;i++){
+                if(inputs[i].checked===true){
+                    inputs[i].checked = false
+                }else{
+                    inputs[i].checked = true
+                }
+            }
+        }
+    }
+</script>
+</html>

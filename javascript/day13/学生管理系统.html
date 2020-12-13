@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>学生管理系统</title>
+</head>
+<body>
+<table>
+    <tr>
+        <th>姓名</th>
+        <th>性别</th>
+        <th>年龄</th>
+        <th>操作</th>
+    </tr>
+    <tr>
+        <td>孟婷亭</td>
+        <td>18</td>
+        <td>女</td>
+        <td>
+            <a href="javascript:;">删除</a>
+        </td>
+    </tr>
+    <tr>
+        <td>翁皓</td>
+        <td>18</td>
+        <td>男</td>
+        <td>
+            <a href="javascript:;">删除</a>
+        </td>
+    </tr>
+    <tr>
+        <td>班长</td>
+        <td>18</td>
+        <td>男</td>
+        <td>
+            <a href="javascript:;">删除</a>
+        </td>
+    </tr>
+</table>
+<input type="text" placeholder="请输入姓名"><br>
+<input type="text" placeholder="请输入性别"><br>
+<input type="text" placeholder="请输入年龄">
+<input type="button" id="btn" value="添加">
+<script>
+    window.onload = function () {
+        var btn = document.getElementById('btn')
+        var inputNodes = document.querySelectorAll('input[type="text"]')
+        var tbodyNode = document.querySelector('table tbody')
+        btn.addEventListener('click',function () {
+            var name = inputNodes[0].value
+            var age = inputNodes[1].value
+            var gender = inputNodes[2].value
+            if (name.trim()&&age.trim()&&gender.trim()){
+                var trNode = document.createElement('tr')
+                var tdname = document.createElement('td');
+                tdname.innerHTML = name;
+                trNode.appendChild(tdname)
+                var tdage = document.createElement('td')
+                tdage.innerHTML = age
+                trNode.appendChild(tdage)
+                var tdgender = document.createElement('td')
+                tdgender.innerHTML = gender
+                trNode.appendChild(tdgender)
+                var tddel = document.createElement('td')
+                tddel.innerHTML = '<a href="javascript:;">删除</a>'
+                trNode.appendChild(tddel)
+                tbodyNode.appendChild(trNode)
+            }else{
+                alert('输入错误!')
+            }
+            inputNodes[0].value = ''
+            inputNodes[1].value = ''
+            inputNodes[2].value = ''
+        })
+
+    }
+</script>
+</body>
+</html>

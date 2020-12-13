@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul{
+            list-style: none;
+        }
+        #box{
+            width: 3.73rem;
+            height: 3.73rem;
+            border: 0.01rem solid black;
+            overflow: hidden;
+            position: relative;
+        }
+        img{
+            position: absolute;
+            width: 13.26rem;
+            height: 8.74rem;
+        }
+    </style>
+</head>
+<body>
+<div id="box">
+    <img src="img/map.png" alt="">
+</div>
+<script type="text/javascript">
+    document.documentElement.style.fontSize = document.documentElement.clientWidth*100/375+'px'
+    window.onresize = function () {
+        document.documentElement.style.fontSize = document.documentElement.clientWidth*100/375+'px'
+    }
+    var img = document.querySelector('img')
+    var box = document.getElementById('box')
+
+    box.addEventListener('touchstart',function (e) {
+        this.start_x = e.targetTouches[0].clientX
+        this.startleft = img.offsetLeft
+        this.start_y = e.targetTouches[0].clientY
+        this.starttop = img.offsetTop
+    })
+    box.addEventListener('touchmove',function (e) {
+        this.moving_x = e.targetTouches[0].clientX
+        this.moving_left = this.moving_x - this.start_x + this.startleft
+        this.moving_y = e.targetTouches[0].clientY
+        this.moving_top = this.moving_y - this.start_y + this.starttop
+        if (this.moving_left>=1) {
+            this.moving_left = 1
+        }else if(this.moving_left<=box.offsetWidth-img.offsetWidth-1){
+            this.moving_left=box.offsetWidth-img.offsetWidth-1
+        }
+        if (this.moving_top >=1){
+            this.moving_top = 1
+        }else if(this.moving_top<=box.offsetHeight-img.offsetHeight-1){
+            this.moving_top=box.offsetHeight-img.offsetHeight-1
+        }
+        console.log(this.moving_left,box.offsetWidth,img.offsetWidth)
+        img.style.left = this.moving_left + 'px'
+        img.style.top = this.moving_top + 'px'
+    })
+
+    document.addEventListener('touchstart',function (e) {
+        e.preventDefault()
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script>
+		// function Person(name,age,gender){
+		// 	this.name = name;
+		// 	this.age = age;
+		// 	this.gender = gender;
+		// 	this.eat  = function(){
+		// 		console.log('吃饭');
+		// 	}
+		// }
+		// var charlie =new Person('张超',15,'男')
+		// alert(charlie.name)
+
+
+					// function add(a,b){
+					// 	console.log(this);   //代表window对象
+					// 	function add2(c,d) {
+					// 		console.log(this);  //代表window对象
+					// 	}
+					// 	add2(1,2)
+					// 	return a + b;
+					// }
+					//
+					// console.log(window.add(10,20));
+
+		// obj = {
+		// 	name:'5',
+		// 	age:'6',
+		// 	}
+		// a = obj
+		// alert(a.name)
+
+
+		//实例化对象
+
+		// function Singer(name,age,gender){
+		// 	this.name = name
+		// 	this.age = age
+		// 	this.gender = gender
+		// 	this.sing = function () {
+		// 		console.log('我什么都能唱!')
+		// 	}
+		// }
+		//
+		// var singer1 = new Singer('张大超','21s','male')
+		// var singer2 = new Singer('雪瑞瑞','21s','female')
+		// console.log(singer1.name,singer1.age)
+		// singer1.sing()
+		// console.log(singer2.name,singer2.age)
+		// singer2.sing()
+		// var arr = [1,23,4]
+		// arr.pop()
+		// arr.push(55)
+		// console.log(arr)
+
+		// var a = ['A', 'B', 'C'];
+		// var s = new Set(['A', 'B', 'C']);
+		// var m = new Map([[1, 'x'], [2, 'y'], [3, 'z']]);
+		// for (var x of a) { // 遍历Array
+		// 	console.log(x);
+		// }
+		// for (var x of s) { // 遍历Set
+		// 	console.log(x);
+		// }
+		// for (var x of m) { // 遍历Map
+		// 	console.log(x[0] + '=' + x[1]);
+		// }
+
+		// var a = ['A', 'B', 'C'];
+		// a.push(name = 'Hello');
+		// for (var x in a) {
+		// 	console.log(x); // '0', '1', '2', 'name'
+		// }
+		// console.log(a.length)
+		// function foo(a,b,...rest){
+		// 	console.log(rest)
+		// }
+		// foo(1,2,3,4,3,6)
+
+		// function area_of_circle(r,pi=3.14){
+		// 	return r*r*pi
+		// }
+		// console.log(area_of_circle(5))
+		// function foo() {
+		// 	var sum = 0;
+		// 	for ( i=0; i<100; i++) {
+		// 		sum += i;
+		// 	}
+		// 	// SyntaxError:
+		// 	console.log(i)
+		// }
+		//
+		// foo()
+
+		// const PI = 3.14;
+		// // PI = 3; // 某些浏览器不报错，但是无效果！
+		// console.log(PI); // 3.14
+
+		// var Student = {
+		// 	name: 'Robot',
+		// 	height: 1.2,
+		// 	run: function () {
+		// 		console.log(this.name + ' is running...');
+		// 	}
+		// };
+		//
+		// var xiaoming = {
+		// 	name: '小明'
+		// };
+		//
+		// xiaoming.__proto__ = Student;
+		//
+		// console.log(xiaoming.name)
+		// xiaoming.run()
+
+		// function Student(name) {
+		// 	this.name = name;
+		// }
+		//
+		// Student.prototype.hello = function () {
+		// 	alert('Hello, ' + this.name + '!');
+		// };
+		// var zc = new Student('zc')
+		// zc.hello()
+		// console.log(zc instanceof Student)
+		// var num1 = 10;
+		// var num2 = num1;
+		// num1 = 20;
+		// console.log(num1);
+		// console.log(num2);
+
+		// var num = 50;
+		//
+		// function f1(num) {
+		// 	num = 60;
+		// 	console.log(num);
+		// }
+		// f1(num);
+		// console.log(num);
+		// var num2 = [1,2];
+		// function f1(num2) {
+		// 	this.num2 = num2;
+		// }
+		// var f2 = new f1(2);
+		// console.log(Window instanceof Object);
+	// function f1(arr){
+	// 	for(var i = 0; i < arr.length; i++){
+	// 		arr[i] += 2
+	//
+	// 	}
+	// 	console.log(arr);
+	//
+	// }
+	// var arr;
+	//
+	// arr = [1,2];
+	// f1(arr)
+	// console.log(arr);
+	// 	var a = [1,2];
+	// 	var b = a;
+	// 	a[0] = 20;
+	// 	console.log(b);//[20,2];
+	// 	console.log(a);
+	// 	var a = ;
+	// 	var b = 1;
+	// 	console.log(a == b);//
+
+		// function Person(name, age, salary) {
+		// 	this.name = name;
+		// 	this.age = age;
+		// 	this.salary = salary;
+		// }
+		//
+		// function f1(person) {
+		// 	person.name = "ls";
+		// 	p = new Person("z", 1, 1);
+		// }
+		//
+		// var p;
+		//
+		// p = new Person("zs", 15, 11);
+		// console.log(p.name,p.age);
+		// f1(p);
+		// console.log(p.name,p.age);
+
+		// var a = '123'
+		// console.log(a.split('').reverse().join(''))
+
+		// var arr = [1,2,3,4,5]
+		// arr.splice(2,3,'赵丽颖')
+		// console.log(arr)
+		//
+		// var str = '123124124'
+		// console.log(str.replace('123','125'));
+		// var obj = {}
+		// var str = 'AABBAAAC'
+		// obj[str[0]] = 0
+		// var count = 0;
+		// for (let i = 0;i<str.length;i++){
+		// 	var charS = str[i]
+		// 	if(obj[charS]){
+		// 		obj[charS]++
+		// 		obj.set(indexof,i)
+		// 	}else{
+		// 		obj[charS] = 1
+		// 	}
+		// }
+		// console.log(obj)
+
+	</script>
+</html>

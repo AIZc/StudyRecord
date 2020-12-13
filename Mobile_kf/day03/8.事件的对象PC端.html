@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>事件对象</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul{
+            list-style: none;
+        }
+        #box{
+            margin-top: 600px;
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            background-color: pink;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+<div id="box">11111</div>
+<script type="text/javascript">
+	var box = document.getElementById('box')
+    box.addEventListener('click',function (e) {
+        var x = e.clientX
+        var y = e.clientY
+        //
+        var a = e.pageX
+        var b = e.pageY
+        console.log(x,y,a,b)
+    })
+    window.onkeydown = function (e) {
+        if(e.key === 'c' && e.ctrlKey === true){
+            // alert('按下了ctrl+c')
+            e.preventDefault()    //  阻止了复制
+        }
+    }
+    window.oncontextmenu = function (e) {
+        e.preventDefault()
+    }
+</script>
+</body>
+</html>

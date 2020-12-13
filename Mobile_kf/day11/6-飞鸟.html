@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul{
+            list-style: none;
+        }
+        canvas{
+            border: solid 2px black;
+            /*position: absolute;*/
+            display: block;
+            margin: 100px auto;
+        }
+    </style>
+</head>
+<body>
+<canvas></canvas>
+<script type="text/javascript">
+    var canvas = document.querySelector('canvas')
+    canvas.width = 600;
+    canvas.height = 400;
+    var w = 100;
+    var count = 0
+    var left = -w
+    //获取画笔
+    var ctx = canvas.getContext('2d')
+
+    setInterval(function () {
+        ctx.clearRect(0,0,canvas.width,canvas.height)
+        count++;
+        //1.创建图片对象
+        // let img = new Image;
+        var img = document.createElement('img');
+        //2.设置src
+        img.src = './img/q_r'+(count%8+1)+'.jpg'
+
+        //3.绑定事件
+        img.onload = function () {
+            //绘制图形
+            ctx.drawImage(img,left+=1,160,w,img.height*w/img.width)
+        }
+    },100)
+</script>
+</body>
+</html>

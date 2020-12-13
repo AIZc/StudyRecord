@@ -1,0 +1,102 @@
+
+//顶部工具栏
+.top-bar{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: black;
+  height:  48px;
+  padding: 0 20px;
+}
+
+.top-bar a{
+  color: white;
+  text-decoration: none;
+  transition: opacity 500ms;
+}
+
+.top-bar>div a:hover{
+  opacity: 0.6;
+}
+//设置左侧导航
+.menu-btn{
+  display: flex;
+  width: 20px;
+  height: 20px;
+  flex-flow: column;
+  justify-content: space-between;
+}
+.menu-btn .btn-inner{
+  height: 4px;
+  background-color: white;
+  border-radius: 2px;
+  transform-origin: left;
+  transition: all 400ms;
+}
+.menu-btn:hover .btn-inner:nth-child(1){
+  width: 23px;
+
+  transform: rotateZ(45deg);
+}
+.menu-btn:hover .btn-inner:nth-child(3){
+  width: 23px;
+  transform: rotateZ(-45deg);
+}
+.menu-btn:hover .btn-inner:nth-child(2){
+  opacity: 0;
+}
+.menu-wrapper .menu-btn:hover{
+  opacity: 1;
+}
+
+
+.left-menu{
+  display: none;
+  color: white;
+}
+
+
+//设置logo样式
+.logo-wrapper .logo{
+}
+.logo-wrapper .logo a{
+  display: block;
+  width: 120px;
+  height: 30px;
+  background-image: url(../img/dff63979.sprites-index@2x.png);
+  background-size: 400px 400px;
+  text-indent: -9999px;
+}
+
+//媒体查询
+@media only screen and (min-width:768px) {
+  .top-bar{
+    padding: 0 10%;
+  }
+    .menu-wrapper{
+      flex: auto;
+      order: 2;
+    //  隐藏菜单按钮
+      .menu-btn{
+        display: none;
+      }
+      .left-menu{
+        line-height: 48px;
+        display: flex;
+        justify-content: space-evenly;
+        li{
+          margin: 0 15px;
+        }
+        li span{
+          display: none;
+        }
+      }
+
+    }
+    .logo-wrapper{
+      order: 1;
+    }
+    .user-wrapper{
+      order: 3;
+    }
+}

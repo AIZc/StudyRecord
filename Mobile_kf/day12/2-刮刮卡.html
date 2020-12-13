@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        canvas {
+            margin: 50px auto;
+            border: 1px solid black;
+            display: block;
+            background: url("img/img.png");
+        }
+    </style>
+</head>
+<body>
+<canvas></canvas>
+<script type="text/javascript">
+    let canvas = document.querySelector('canvas');
+    canvas.width = 118;
+    canvas.height = 147;
+    let ctx = canvas.getContext('2d');
+    let isDown = false
+    let over = 0;
+    ctx.fillStyle = 'gray'
+    ctx.fillRect(0, 0, 118, 147)
+
+    ctx.globalCompositeOperation = 'destination-out'
+
+    ctx.fillRect(10,10,10,10)
+
+    canvas.addEventListener('mouseover',function () {
+        over = 1;
+        canvas.addEventListener('mousedown',function (e) {
+            //开始绘制
+            ctx.beginPath()
+            ctx.lineWidth = 10
+            //移动到起始点
+            ctx.moveTo(e.offsetX,e.offsetY)
+            isDown = true
+        })
+        canvas.addEventListener('mousemove',function (e) {
+            if (isDown&&over){
+                ctx.lineTo(e.offsetX,e.offsetY)
+                ctx.stroke()
+            }
+        })
+        canvas.addEventListener('mouseup',function () {
+            isDown = false
+        })
+
+    })
+    canvas.addEventListener('mouseout',function () {
+        over = 0;
+    })
+</script>
+</body>
+</html>

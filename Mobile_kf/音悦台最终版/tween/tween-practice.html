@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul{
+            list-style: none;
+        }
+        #box {
+            width: 200px;
+            height: 100px;
+            background-color: orangered;
+        }
+    </style>
+</head>
+<body>
+<div id="box"></div>
+<button>暂停/继续</button>
+<script type="text/javascript">
+    function tween(t,b,c,d,s){
+        if (s == undefined) s = 1.70158;
+        return c*((t=t/d-1)*t*((s+1)*t + s) + 1) + b;
+    }
+    var box = document.getElementById('box')
+    var btn = document.querySelector('button')
+    var t = 0;
+    var b = 200;
+    var c = 1000;
+    var d = 5000;
+    var jg = 10
+    var timer = null;
+    function run() {
+        timer = setInterval(function () {
+            t+=jg;
+            var width = tween(t,b,c,d)
+            box.style.width = width + 'px'
+            if (t >=d){
+                clearInterval(timer)
+            }
+        },jg)
+    }
+    run()
+    btn.addEventListener('click',function () {
+        if (timer){
+            clearInterval(timer);
+        }else{
+            run();
+        }
+
+    })
+
+</script>
+</body>
+</html>

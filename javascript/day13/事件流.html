@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .da{
+            width: 300px;
+            height: 300px;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+            background-color: hotpink;
+        }
+        .er{
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+            background-color: yellowgreen;
+        }
+        .san{
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+            background-color: deepskyblue;
+        }
+    </style>
+</head>
+<body>
+<div class="da">
+    <div class="er">
+        <div class="san"></div>
+    </div>
+</div>
+<script>
+    var da = document.querySelector('.da')
+    var er = document.querySelector('.er')
+    var san = document.querySelector('.san')
+    da.addEventListener('click',function (e) {
+        console.log("i'm da!")
+
+    })
+    er.addEventListener('click',function (e) {
+        console.log("i'm er!")
+    })
+    san.addEventListener('click',function (e) {
+        console.log("i'm san!")
+        e.stopPropagation()
+    })
+</script>
+</body>
+</html>

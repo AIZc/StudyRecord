@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        ul.txh{
+            /*width: 500px;*/
+            height: 300px;
+            border: 5px solid black;
+            display: flex;
+            justify-content: space-evenly;
+            /*align-items: center;*/
+            align-content: stretch;
+        /*    flex-direction: row;
+            flex-wrap: wrap;*/
+            flex-flow: row wrap;
+        }
+        .txh>li{
+            width: 600px;
+            /*height: 100px;*/
+            display:block;
+            border: 1px solid deeppink;
+            line-height: 100px;
+            text-align: center;
+            font-size: 30px;
+            color: pink;
+            overflow: hidden;
+            /*background-color: black;*/
+            flex-shrink: 0;
+            box-sizing: border-box;
+            flex-grow: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="txh-wrapper">
+        <ul class="txh">
+            <li>1111</li>
+            <li>2222</li>
+            <li>3333</li>
+            <li>4444</li>
+            <li>5555</li>
+            <li>6666</li>
+            <li>7777</li>
+        </ul>
+    </div>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #box{
+            width: 300px;
+            height: 200px;
+            background-color: hotpink;
+            transition: background-color 2s;
+            position: relative;
+            font-size: 30px;
+            text-align: center;
+            line-height: 200px;
+            color: yellowgreen;
+        }
+        #top{
+            width: 0;
+            height: 30px;
+            background-color: deepskyblue;
+            transition:all 2s;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        #bottom{
+            position: absolute;
+            width: 0;
+            height: 30px;
+            background-color: deepskyblue;
+            transition:all 2s;
+            bottom: 0;
+            right: 0;
+        }
+    </style>
+</head>
+<body>
+<div id="box">
+    <div id="top"></div>
+    尚硅谷
+    <div id="bottom"></div>
+</div>
+</body>
+<script></script>
+<script>
+    window.onload = function () {
+        var box = document.getElementById('box')
+        var top = document.getElementById('top')
+        var bottom = document.getElementById('bottom')
+        box.onmouseenter = function () {
+            this.style.backgroundColor = 'yellowgreen'
+            this.style.color = 'hotpink'
+            top.style.width = '300px'
+            bottom.style.width = '300px'
+        }
+        box.onmouseleave = function () {
+            this.style.backgroundColor = 'hotpink'
+            this.style.color = 'yellowgreen'
+            top.style.width = 0
+            bottom.style.width = 0
+        }
+    }
+    console.log(document.documentElement.children)
+</script>
+</html>

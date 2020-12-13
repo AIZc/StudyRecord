@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul{
+            list-style: none;
+        }
+        #box{
+            width: 100px;
+            height: 100px;
+            background-color: burlywood;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+<div id="app">
+    <div id="box"></div>
+</div>
+<script type="text/javascript">
+    // alert(document.body.clientHeight)
+    var app = document.getElementById('app')
+    var box = document.getElementById('box')
+    box.addEventListener('touchstart',function (e) {
+        // box.innerHTML = 'changedTouches 的个数: '+ e.changedTouches.length
+        //     + '<br> targetTouches 的个数' + e.targetTouches.length
+        //     + '<br> touches 的个数 '+ e.touches.length;
+        this.wx1 = e.targetTouches[0].clientX
+        this.wx2 = this.offsetLeft
+
+        this.wy1 = e.targetTouches[0].clientY
+        this.wy2 = this.offsetTop
+
+    })
+    box.addEventListener('touchmove',function (e) {
+        // box.innerHTML = 'changedTouches 的个数: '+ e.changedTouches.length
+        //     + '<br> targetTouches 的个数' + e.targetTouches.length
+        //     + '<br> touches 的个数 '+ e.touches.length;
+        // var cx = e.targetTouches[0].clientX
+        // var cy = e.targetTouches[0].clientY
+        // box.innerHTML = parseInt(cx)+','+parseInt(cy)
+        this.wx3 = e.targetTouches[0].clientX
+
+        this.wy3 = e.targetTouches[0].clientY
+        var wx4 = this.wx3-(this.wx1-this.wx2)
+        var wy4 = this.wy3-(this.wy1-this.wy2)
+        if (wx4<=0){
+            wx4 = 0
+        }else if (wx4>=(document.documentElement.clientWidth-this.offsetWidth)){
+            wx4 = document.body.clientWidth-this.offsetWidth
+        }
+        if (wy4<=0){
+            wy4 = 0
+        }else if (wy4>=(document.documentElement.clientHeight-this.offsetHeight)){
+            wy4 = document.documentElement.clientHeight-this.offsetHeight
+        }
+
+        this.style.left = wx4+'px'
+        this.style.top = wy4+'px'
+    })
+    // box.addEventListener('touchend',function (e) {
+    //     // box.innerHTML = 'changedTouches 的个数: '+ e.changedTouches.length
+    //     //     + '<br> targetTouches 的个数' + e.targetTouches.length
+    //     //     + '<br> touches 的个数 '+ e.touches.length;
+    //     cx = e.changedTouches[0].clientX
+    //     cy = e.changedTouches[0].clientY
+    //     box.innerHTML = parseInt(cx)+','+parseInt(cy)
+    // })
+    // app.ontouchstart = function (e) {
+    //     // e.preventDefault()
+    // }
+</script>
+</body>
+</html>

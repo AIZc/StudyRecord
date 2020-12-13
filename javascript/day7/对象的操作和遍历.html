@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script>
+		var obj = {}
+		var cry = 'call';
+		obj.name = '爆米花'
+		obj.age = 1
+		console.log(obj)
+		obj.color = 'yellow'
+		obj.category = '阿拉斯加'
+		
+		obj[cry] = function(){
+			console.log('汪呜呜')
+			return '小狗叫'
+		}
+		console.log(obj)
+		
+		delete obj.category
+		console.log(obj)
+		
+		for(var key in obj){
+			console.log(key,obj[key])
+		}
+	</script>
+</html>

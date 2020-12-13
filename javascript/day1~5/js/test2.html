@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script></script>
+</body>
+<script>
+    var dataTest = {
+        name:'赵丽颖',
+        age:32
+    }
+
+    var dataTestArr = [{name:'赵丽颖',age:32},{name:'杨幂',age:33},{name:'热巴',age:28}]
+
+
+    //把对象json化  字符串化
+
+    var ss = JSON.stringify(dataTestArr);
+    console.log(ss);
+
+    var dataStr = JSON.stringify(dataTestArr);
+    console.log(dataStr.length);
+
+
+    var data = JSON.parse(dataStr);
+    console.log(data.length);
+
+</script>
+
+</html>

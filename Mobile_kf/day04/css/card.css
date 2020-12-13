@@ -1,0 +1,105 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  width: 100%;
+  background: #eee;
+}
+header {
+  box-sizing: border-box;
+  width: 10rem;
+  height: 2rem;
+  font-size: 0.53333333rem;
+  font-weight: bold;
+  font-family: PingFangSC-Regular, Arial, sans-serif;
+  text-align: center;
+  line-height: 2rem;
+}
+section {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+.bg {
+  background: #388dcf;
+}
+.bg2 {
+  background: lightblue;
+}
+section .item {
+  width: 9.14666667rem;
+  height: 4.66666667rem;
+  margin: 0 auto;
+  box-sizing: border-box;
+  border-radius: 0.2rem;
+  padding: 0.42666667rem 0.45333333rem 0.45333333rem 0.32rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 0.4rem;
+}
+.pull-left {
+  float: left;
+}
+.clear {
+  clear: both;
+}
+.pull-right {
+  float: right;
+}
+.top .logo {
+  width: 1.04rem;
+  height: 1.04rem;
+  border-radius: 50%;
+}
+.top .title {
+  color: white;
+}
+.top .title .bank {
+  font-size: 0.45333333rem;
+  font-weight: 600;
+  line-height: 0.45333333rem;
+}
+.top .title .card-type {
+  font-size: 0.37333333rem;
+  padding-top: 0.10666667rem;
+}
+.top .cardID {
+  padding-top: 0.21333333rem;
+  color: white;
+  font-family: PingFangSC-Regular, Arial, sans-serif;
+  font-weight: bold;
+  font-size: 0.42666667rem;
+  font-weight: 550;
+}
+.bottom {
+  color: white;
+  text-align: right;
+  font-size: 0.37333333rem;
+}
+.hide {
+  color: #afc4e6;
+}
+.jianhang {
+  background: linear-gradient(to bottom right, #398cce, #3864be);
+  box-shadow: 0rem 0rem 0.08rem #3864be;
+}
+.zhaoshang {
+  background: linear-gradient(to bottom right, #ff7566, #ff5262);
+  box-shadow: 0rem 0rem 0.08rem #ff5262;
+}
+.wangshang {
+  background: linear-gradient(to bottom right, #01aa9a, #028caf);
+  box-shadow: 0rem 0rem 0.08rem #028caf;
+}
+.nonghang {
+  background: linear-gradient(to bottom right, #438A4E, #0C4139);
+  box-shadow: 0rem 0rem 0.08rem #0C4139;
+}
+.jiaotong {
+  background: linear-gradient(to bottom right, #A49264, #A58671);
+  box-shadow: 0rem 0rem 0.08rem #A58671;
+}
+/*# sourceMappingURL=card.css.map */

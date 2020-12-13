@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>键盘事件</title>
+</head>
+<style>
+    body{
+        background-color: rgb(225,225,225);
+    }
+</style>
+<body>
+<input type="text" id="key">
+</body>
+<script>
+    window.onload = function () {
+        var textkey = document.getElementById('key')
+        textkey.onkeyup = function (){
+            console.log('按了一下键盘,对应的键盘码是:',event.keyCode)
+            if (event.keyCode === 13){
+                console.log('按了一下回车')
+            }
+        }
+    }
+</script>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #box{
+            width: 100%;
+            height: 500px;
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+<div id="box" hasGestureStartTriggered="true">
+
+</div>
+<script>
+
+    function gesture(el,callback) {
+        el.addEventListener('touchstart',function (e) {
+            if (e.touches.length>=2){
+                callback.start()
+                el.hasGestureStartTriggered = true;
+            }
+        })
+        el.addEventListener('touchmove',function (e) {
+            if (e.touches.length>=2){
+                callback.change();
+
+            }
+        })
+        el.addEventListener('touchmove',function (e) {
+            if (e.touches.length<2 &&el.hasGestureStartTriggered){
+                callback.end()
+                el.hasGestureStartTriggered = false;
+            }
+        })
+    }
+    // gesture(box,gesture)
+</script>
+</body>
+</html>

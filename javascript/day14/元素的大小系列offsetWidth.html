@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        #box{
+            position: relative;
+            margin-left: 100px;
+            width: 500px;
+            height: 500px;
+            border: 10px solid blue;
+            background-color: red;
+        }
+        #box #box1{
+            position: absolute;
+            left:50px;
+            top: 50px;
+            width: 300px;
+            height: 300px;
+            margin-left: 50px;
+            padding: 10px;
+            overflow: scroll;
+            border: 10px solid deepskyblue;
+            background-color: green;
+        }
+
+    </style>
+</head>
+<body>
+<div id="box">
+    <div id="box1">
+        <div id="box2"></div>
+    </div>
+</div>
+<script>
+    var box = document.getElementById('box')
+    var box1 = document.getElementById('box1')
+    console.log(box1.offsetLeft)
+</script>
+</body>
+</html>

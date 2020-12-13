@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script type="text/javascript">
+	var name = 'world'
+    ;(function () {
+        // var name;
+        if(typeof name === "undefined"){  //true
+            var name = 'jack'
+            console.log(name)
+        }else{
+            console.log(name)
+        }
+    })()     // jack
+</script>
+</body>
+</html>

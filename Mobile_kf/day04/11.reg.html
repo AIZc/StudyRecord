@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<script type="text/javascript">
+	var pxstr = "<!DOCTYPE html>\n" +
+        "<html lang=\"en\">\n" +
+        "<head>\n" +
+        "    <meta charset=\"UTF-8\">\n" +
+        "    <meta name=\"viewport\" content=\"width=device-width\">\n" +
+        "    <title>我的银行卡</title>\n" +
+        "    <style>\n" +
+        "        *{\n" +
+        "            margin:0;\n" +
+        "            padding:0;\n" +
+        "        }\n" +
+        "        body{\n" +
+        "            width:100%;\n" +
+        "            background: #eee;\n" +
+        "        }\n" +
+        "        header{\n" +
+        "            box-sizing: border-box;\n" +
+        "            width:375px;\n" +
+        "            height:75px;\n" +
+        "            font-size:20px;\n" +
+        "            font-weight:bold;\n" +
+        "            font-family: PingFangSC-Regular,Arial,sans-serif  ;\n" +
+        "            text-align:center;\n" +
+        "            line-height:75px;\n" +
+        "\n" +
+        "        }\n" +
+        "        section{\n" +
+        "            width:100%;\n" +
+        "            height:auto;\n" +
+        "            overflow: hidden;\n" +
+        "            box-sizing: border-box;\n" +
+        "        }\n" +
+        "        .bg{\n" +
+        "            background:#388dcf;\n" +
+        "        }\n" +
+        "        .bg2{\n" +
+        "            background:lightblue;\n" +
+        "        }\n" +
+        "        section .item{\n" +
+        "            width:343px;\n" +
+        "            height:175px;\n" +
+        "            margin:0 auto;\n" +
+        "            box-sizing: border-box;\n" +
+        "            border-radius:7.5px;\n" +
+        "            padding: 16px 17px 17px 12px;\n" +
+        "            display:flex;\n" +
+        "            flex-direction: column;\n" +
+        "            justify-content: space-between;\n" +
+        "            margin-bottom:15px;\n" +
+        "        }\n" +
+        "        .pull-left{\n" +
+        "            float:left;\n" +
+        "        }\n" +
+        "        .clear{\n" +
+        "            clear:both;\n" +
+        "        }\n" +
+        "        .pull-right{\n" +
+        "            float:right;\n" +
+        "        }\n" +
+        "        .top .logo{\n" +
+        "            width: 39px;\n" +
+        "            height:39px;\n" +
+        "            border-radius: 50%;\n" +
+        "        }\n" +
+        "        .top .title{\n" +
+        "            color:white;\n" +
+        "        }\n" +
+        "        .top .title .bank{\n" +
+        "            font-size:17px;\n" +
+        "            font-weight: 600;\n" +
+        "            line-height:17px;\n" +
+        "        }\n" +
+        "        .top .title .card-type{\n" +
+        "            font-size:14px;\n" +
+        "            padding-top:4px;\n" +
+        "        }\n" +
+        "        .top .cardID{\n" +
+        "            padding-top:8px;\n" +
+        "            color:white;\n" +
+        "            font-family: PingFangSC-Regular, Arial, sans-serif ;\n" +
+        "            font-weight: bold;\n" +
+        "            font-size: 16px;\n" +
+        "            font-weight:550;\n" +
+        "        }\n" +
+        "        .bottom{\n" +
+        "            color:white;\n" +
+        "            text-align:right;\n" +
+        "            font-size: 14px;\n" +
+        "        }\n" +
+        "        .hide{\n" +
+        "            color: #afc4e6;\n" +
+        "        }\n" +
+        "\n" +
+        "        .jianhang{\n" +
+        "            background: linear-gradient(to bottom right, #398cce, #3864be);\n" +
+        "            box-shadow: 0px 0px 3px #3864be;\n" +
+        "        }\n" +
+        "\n" +
+        "        .zhaoshang{\n" +
+        "            background: linear-gradient(to bottom right, #ff7566, #ff5262);\n" +
+        "            box-shadow: 0px 0px 3px #ff5262;\n" +
+        "        }\n" +
+        "        .wangshang{\n" +
+        "            background: linear-gradient(to bottom right, #01aa9a, #028caf);\n" +
+        "            box-shadow: 0px 0px 3px #028caf;\n" +
+        "        }\n" +
+        "        .nonghang{\n" +
+        "            background: linear-gradient(to bottom right, #438A4E, #0C4139);\n" +
+        "            box-shadow: 0px 0px 3px #0C4139;\n" +
+        "        }\n" +
+        "        .jiaotong{\n" +
+        "            background: linear-gradient(to bottom right, #A49264, #A58671);\n" +
+        "            box-shadow: 0px 0px 3px #A58671;\n" +
+        "        }\n" +
+        "    </style>\n" +
+        "</head>\n" +
+        "<body>\n" +
+        "    <header>我的银行卡</header>\n" +
+        "    <section>\n" +
+        "        <div class=\"item jianhang\">\n" +
+        "            <div class=\"top\">\n" +
+        "                <div class=\"title pull-left\">\n" +
+        "                    <div class=\"bank\">建设银行</div>\n" +
+        "                    <div class=\"card-type\">储蓄卡</div>\n" +
+        "                </div>\n" +
+        "                <div class=\"cardID pull-right\"><span class=\"hide\">****</span>&nbsp;<span>9527</span></div>\n" +
+        "            </div>\n" +
+        "            <div class=\"clear\"></div>\n" +
+        "            <div class=\"bottom\">\n" +
+        "                每日支付限额 10000 元\n" +
+        "            </div>\n" +
+        "        </div>\n" +
+        "        <div class=\"item zhaoshang\">\n" +
+        "            <div class=\"top\">\n" +
+        "                <div class=\"title pull-left\">\n" +
+        "                    <div class=\"bank\">招商银行</div>\n" +
+        "                    <div class=\"card-type\">信用卡</div>\n" +
+        "                </div>\n" +
+        "                <div class=\"cardID pull-right\"><span class=\"hide\">****</span>&nbsp;<span>4396</span></div>\n" +
+        "            </div>\n" +
+        "            <div class=\"clear\"></div>\n" +
+        "            <div class=\"bottom\">\n" +
+        "                每日支付限额 20000 元\n" +
+        "            </div>\n" +
+        "        </div>\n" +
+        "        <div class=\"item wangshang\">\n" +
+        "            <div class=\"top\">\n" +
+        "                <div class=\"title pull-left\">\n" +
+        "                    <div class=\"bank\">网商银行</div>\n" +
+        "                    <div class=\"card-type\">银行账户</div>\n" +
+        "                </div>\n" +
+        "                <div class=\"cardID pull-right\"><span class=\"hide\">****</span>&nbsp;<span>1024</span></div>\n" +
+        "            </div>\n" +
+        "            <div class=\"clear\"></div>\n" +
+        "            <div class=\"bottom\">\n" +
+        "                每日支付限额 40000 元\n" +
+        "            </div>\n" +
+        "        </div>\n" +
+        "        <div class=\"item nonghang\">\n" +
+        "            <div class=\"top\">\n" +
+        "                <div class=\"title pull-left\">\n" +
+        "                    <div class=\"bank\">农业银行</div>\n" +
+        "                    <div class=\"card-type\">储蓄卡</div>\n" +
+        "                </div>\n" +
+        "                <div class=\"cardID pull-right\"><span class=\"hide\">****</span>&nbsp;<span>8848</span></div>\n" +
+        "            </div>\n" +
+        "            <div class=\"clear\"></div>\n" +
+        "            <div class=\"bottom\">\n" +
+        "                每日支付限额 80000 元\n" +
+        "            </div>\n" +
+        "        </div>\n" +
+        "        <div class=\"item jiaotong\">\n" +
+        "            <div class=\"top\">\n" +
+        "                <div class=\"title pull-left\">\n" +
+        "                    <div class=\"bank\">交通银行</div>\n" +
+        "                    <div class=\"card-type\">储蓄卡</div>\n" +
+        "                </div>\n" +
+        "                <div class=\"cardID pull-right\"><span class=\"hide\">****</span>&nbsp;<span>1987</span></div>\n" +
+        "            </div>\n" +
+        "            <div class=\"clear\"></div>\n" +
+        "            <div class=\"bottom\">\n" +
+        "                每日支付限额 80000 元\n" +
+        "            </div>\n" +
+        "        </div>\n" +
+        "    </section>\n" +
+        "</body>\n" +
+        "</html>";
+
+	var remstr = pxstr.replace(/(\d+)px/g,function (val,group) {
+	    return group / 100 + 'rem'
+    })
+    console.log(remstr)
+</script>
+</body>
+</html>

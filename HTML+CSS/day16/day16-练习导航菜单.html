@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>练习导航菜单</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            text-decoration: none;
+        }
+        .nav{
+            border-bottom: 4px solid skyblue;
+        }
+        .nav ul{
+            display: flex;
+            justify-content: center;
+        }
+        ul li{
+            flex: auto;
+        }
+        ul li a{
+            display: block;
+            color: #fff;
+            text-decoration: none;
+            background-color: skyblue;
+            border-radius: 5px 5px 0 0;
+            padding: 4px 10px;
+            margin-left: 5px;
+            text-align: center;
+        }
+        ul li a:hover{
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+     <div class="nav">
+         <ul>
+             <li><a href="javascript:;">首页</a></li>
+             <li><a href="javascript:;">新闻</a></li>
+             <li><a href="javascript:;">关于</a></li>
+             <li><a href="javascript:;">联系</a></li>
+         </ul>
+     </div>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        canvas {
+            margin: 50px auto;
+            border: 1px solid black;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+<canvas></canvas>
+<script type="text/javascript">
+    let canvas = document.querySelector('canvas');
+    canvas.width = 600;
+    canvas.height = 400;
+    let ctx = canvas.getContext('2d');
+    // 目标图形
+    ctx.fillStyle = 'red'
+    ctx.fillRect(100, 100, 300, 50)
+    ctx.globalCompositeOperation = 'source-out'
+    // 源图形
+    ctx.fillStyle = 'green'
+    ctx.fillRect(100, 100, 50, 3000)
+
+
+</script>
+</body>
+</html>

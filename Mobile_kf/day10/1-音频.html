@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<audio id="music" src="mp3/阿拉斯加的海湾.m4a"
+       controls
+>
+</audio>
+<button>+</button>
+<button>-</button>
+<button>静音/噪音</button>
+<button>加速播放</button>
+<button>减速播放</button>
+<script type="text/javascript">
+	let audio = document.getElementById('music')
+    let btns = document.querySelectorAll('button')
+    // console.log(audio.duration);
+    audio.addEventListener('loadedmetadata',function () {
+        // console.log('11')
+        // console.log(audio.duration);
+    })
+    audio.addEventListener('timeupdate',function () {
+        // console.log('22')
+        // console.log(audio.currentTime)
+        console.log(this.ended)
+    })
+    audio.addEventListener('volumechange',function () {
+        console.log(audio.volume)
+    })
+    btns[0].addEventListener('click',function () {
+        if (audio.volume<1)
+        audio.volume += 0.1;
+    })
+    btns[1].addEventListener('click',function () {
+        if (audio.volume>0.1)
+            audio.volume -= 0.1;
+    })
+    btns[2].addEventListener('click',function () {
+        audio.muted = !audio.muted
+    })
+    btns[3].addEventListener('click',function () {
+        audio.playbackRate += 0.1;
+        console.log(audio.playbackRate)
+    })
+    btns[4].addEventListener('click',function () {
+        audio.playbackRate -= 0.1;
+        console.log(audio.playbackRate)
+    })
+
+</script>
+</body>
+</html>

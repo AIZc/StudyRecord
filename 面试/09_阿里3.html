@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script type="text/javascript">
+	function Person() {
+        getAge = function () {
+            console.log(10)
+        }
+        return this   //window
+    }
+    Person.getAge = function () {
+        console.log(20)
+    }
+    Person.prototype .getAge = function () {
+        console.log(30)
+    }
+    var getAge = function () {
+        console.log(40)
+    }
+    function getAge(){
+	    console.log(50)
+    }
+
+    Person.getAge()  //20
+    getAge() //40
+    Person().getAge()  // 10     Person()中的getAge没有var  会污染全局中的getAge
+    getAge() //10
+    new Person.getAge()  //20
+    new Person().getAge()  //实例的getAge() 实例自身没有,就到原型对象上去找  30
+
+</script>
+</body>
+</html>

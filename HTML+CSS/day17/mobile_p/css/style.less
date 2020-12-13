@@ -1,0 +1,145 @@
+//清除默认样式
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+@root-font-size: 100/750vw * 40;
+
+@body-bgc:#eff0f4;
+
+//创建图标颜色
+@icon-color:#656565;
+
+html{
+  font-size: @root-font-size;
+}
+
+//设置body的样式
+body{
+  background-color: @body-bgc;
+}
+
+//设置最外层容器
+.outer{
+  margin: 0 27/40rem;
+}
+
+//设置顶部工具条的样式
+.top-bar{
+  height: 174/40rem;
+  display: flex;
+  justify-content: space-between;
+  //background-color: #ff253a;
+  align-items: center;
+}
+
+.top-bar i{
+  color: @icon-color;
+}
+
+.btn-wrapper a{
+  color: white;
+}
+
+
+//设置轮播图样式
+.banner img{
+  width: 100%;
+}
+
+
+//设置导航按钮样式
+.btn-wrapper{
+  margin-top: 0.5rem;
+  height: 6rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-flow: row wrap;
+}
+
+.btn-wrapper a{
+  display: block;
+  width: 8rem;
+  height: 2.5rem;
+  line-height: 2.5rem;
+  text-align: center;
+  border-radius: 1.25rem;
+}
+.btn-wrapper a:nth-child(1){
+  background-color: #f87053;
+}
+.btn-wrapper a:nth-child(2){
+  background-color: #c557fe;
+}
+.btn-wrapper a:nth-child(3){
+  background-color: #025a6e;
+}
+.btn-wrapper a:nth-child(4){
+  background-color: #489de1;
+}
+
+//设置课程列表头部样式
+.course-list .list-header{
+  height: 2.5rem;
+  //background-color: #ff253a;
+  margin-top: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.course-list .list-header h2{
+  font-size: 0.825rem;
+  font-weight: normal;
+  border-left: 0.15rem solid skyblue;
+  padding-left: 0.4rem;
+}
+.course-list .list-header a{
+  font-size: 0.7rem;
+}
+
+
+//设置课程列表内容样式
+.list-content{
+  display: flex;
+  width: 18rem;
+  overflow: auto;
+}
+
+.list-content .list-item{
+  width: 8.175rem;
+  height: 8rem;
+  background-color: #fff;
+  border-radius: 0.5rem;
+  flex: none;
+  padding: 0.5rem 0.5rem 0;
+  margin-right: 1rem;
+}
+.list-item .course-img{
+  width: 7rem;
+}
+.list-item .course-img img{
+  width: 100%;
+}
+
+.list-item .course-title{
+  font-size: 0.8rem;
+}
+.list-item .course-author{
+  display: flex;
+  align-items: center;
+  height: 2.3rem;
+  line-height: 2.3rem;
+  font-size: 0.7rem;
+}
+
+.course-author img{
+  width: 1.5rem;
+  margin-right: 0.3rem;
+}
+
+
+

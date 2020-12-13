@@ -1,0 +1,100 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+ul {
+  list-style: none;
+}
+html,
+body,
+#app {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+header {
+  position: relative;
+  z-index: 20;
+  width: 100%;
+  height: 10vh;
+  background-color: black;
+  text-align: center;
+  line-height: 10vh;
+  color: white;
+  font-size: 5vw;
+}
+main {
+  height: 90vh;
+}
+main #content {
+  position: relative;
+}
+main #content ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+main #content ul li {
+  width: 46vw;
+  height: 46vw;
+  margin: 2vw;
+  border-radius: 5vw;
+  overflow: hidden;
+  background: url("../img/loading.gif") no-repeat center center;
+}
+main #content ul li img {
+  width: 100%;
+}
+main #content .pull-up-update {
+  position: absolute;
+  width: 100%;
+  height: 20vh;
+  bottom: -20vh;
+  font-size: 25px;
+  line-height: 20vh;
+  text-align: center;
+}
+#big-image-show {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 20;
+  transform: scale(0);
+  transform-origin: top left;
+  transition: transform 0.3s;
+}
+#big-image-show header {
+  position: relative;
+  z-index: 40;
+  width: 100%;
+  height: 10vh;
+  background-color: black;
+  text-align: center;
+  line-height: 10vh;
+  color: white;
+  font-size: 5vw;
+}
+#big-image-show header .close {
+  position: absolute;
+  right: 0;
+  height: 10vh;
+  line-height: 10vh;
+  font-size: 10vh;
+}
+#big-image-show #show-area {
+  width: 100%;
+  height: 90vh;
+  background-color: #fff;
+  position: relative;
+}
+#big-image-show #show-area img {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+/*# sourceMappingURL=index.css.map */

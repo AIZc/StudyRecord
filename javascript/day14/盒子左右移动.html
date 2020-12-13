@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #box{
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            left: 0;
+            top: 0;
+            background-color: skyblue;
+        }
+    </style>
+</head>
+<body>
+<div id="box"></div>
+<script>
+    var box = document.getElementById('box')
+    var step = 1
+    setInterval(function () {
+        var left = box.offsetLeft+step
+        console.log(left)
+        if (left > document.documentElement.clientWidth-box.offsetWidth){
+            step = -1
+        }else if (left<0){
+            step = 1
+        }
+        box.style.left = left+'px'
+    },2)
+</script>
+</body>
+</html>

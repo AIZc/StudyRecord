@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script type="text/javascript">
+    var a = 6
+    setTimeout(function () {
+        console.log(0)
+        alert(a)       //定时器是异步代码,要等主线上的代码执行完,再执行 所以a= 66
+        a = 666
+    },0)
+    console.log(1)
+    a = 66
+</script>
+</body>
+</html>

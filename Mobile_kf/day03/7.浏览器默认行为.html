@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    ul{
+        list-style: none;
+    }
+    body{
+        height: 5000px;
+        background: linear-gradient(to bottom,#98a,#aef);
+    }
+</style>
+<body>
+<div id="app">
+    <h2><a href="http://www.baidu.com/s?wd=兰亭集序">兰亭集序</a></h2>
+    <p>永和九年永和九年永和九年永和九年永和九年永和九年永和九年永和九年永和九年永和九年永和九年永和九年永和九年永和九年永和九年永和九年永和九年永和九年永和九年永和九年永和九年永和九年永和九年永和九年永和九年永和九年永和九年永和九年永和九年永和九年永和九年永和九年永和九年永和九年永和九年永和九年永和九年永和九年永和九年永和九年永和九年永和九年永和九年永和九年永和九年永和九年永和九年永和九年永和九年永和九年永和九年永和九年永和九年永和九年永和九年永和九年永和九年永和九年永和九年永和九年永和九年永和九年永和九年永和九年永和九年永和九年永和九年永和九年永和九年永和九年永和九年永和九年永和九年永和九年永和九年永和九年永和九年</p>
+</div>
+</body>
+<script type="text/javascript">
+	var app = document.getElementById('app')
+    var a = document.querySelector('a')
+    app.addEventListener('touchstart',function (e) {
+        e.preventDefault()
+    })
+    a.addEventListener('touchstart',function (e) {
+        e.stopPropagation()  //给a设置阻止事件冒泡   a -> h2 -> #app  点击a的事件的事件流上阻断了a之后的冒泡(h2和app的事件对a产生的影响)
+
+    })
+</script>
+</html>

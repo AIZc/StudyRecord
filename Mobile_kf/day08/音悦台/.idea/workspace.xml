@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="6ddd9089-9c44-42d1-a6e0-f8d9dbb02494" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1kfoi5RQMQXtmcYqZd57LCZBrYf" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/css" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="settings.editor.selected.configurable" value="Errors" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\58347\Desktop\web_load\Mobile_kf\day06\音悦台\css" />
+      <recent name="C:\Users\58347\Desktop\web_load\Mobile_kf\day06\音悦台\js" />
+      <recent name="C:\Users\58347\Desktop\web_load\Mobile_kf\day06\音悦台" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="6ddd9089-9c44-42d1-a6e0-f8d9dbb02494" name="Default Changelist" comment="" />
+      <created>1606101132559</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1606101132559</updated>
+      <workItem from="1606101134430" duration="20347000" />
+      <workItem from="1606285664727" duration="23603000" />
+      <workItem from="1606369229307" duration="2604000" />
+      <workItem from="1606459160534" duration="7000000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="1010" y="446" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1606304867446">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="1010" y="446" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/2560.175.1536.832/0.0.2560.1400@0.0.2560.1400" timestamp="1606304867446" />
+    <state x="1060" y="454" key="FileChooserDialogImpl" timestamp="1606294255608">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="1060" y="454" key="FileChooserDialogImpl/2560.175.1536.832/0.0.2560.1400@0.0.2560.1400" timestamp="1606294255608" />
+    <state x="781" y="344" key="SettingsEditor" timestamp="1606309833909">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="781" y="344" key="SettingsEditor/2560.175.1536.832/0.0.2560.1400@0.0.2560.1400" timestamp="1606309833909" />
+    <state x="1001" y="441" width="549" height="524" key="StructurePopup" timestamp="1606126967228">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="1001" y="441" width="549" height="524" key="StructurePopup/2560.175.1536.832/0.0.2560.1400@0.0.2560.1400" timestamp="1606126967228" />
+    <state width="498" height="446" key="SwitcherDM" timestamp="1606126970064">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="498" height="446" key="SwitcherDM/2560.175.1536.832/0.0.2560.1400@0.0.2560.1400" timestamp="1606126970064" />
+    <state x="943" y="315" width="672" height="678" key="search.everywhere.popup" timestamp="1606303454670">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="943" y="315" width="672" height="678" key="search.everywhere.popup/2560.175.1536.832/0.0.2560.1400@0.0.2560.1400" timestamp="1606303454670" />
+  </component>
+</project>

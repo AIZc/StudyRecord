@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul{
+            list-style: none;
+        }
+        canvas{
+            background-color: green;
+        }
+    </style>
+
+</head>
+<body>
+    <canvas id="huabu" width="500" height="500"></canvas>
+<script type="text/javascript">
+	let canvas = document.querySelector('#huabu')
+    let ctx = canvas.getContext('2d');
+	ctx.beginPath()
+    // ctx.fillStyle = 'rgb(200,208,253)'
+    //
+    // //方法1
+    // // 确定填充
+	// ctx.fillRect(100,200,100,100)
+    //
+    // //方法2
+    // //确定区域
+    // ctx.rect(0,0,200,100);
+    // //填充区域
+    // ctx.fill()
+    //
+    //
+    // ctx.strokeStyle = 'orange';
+    // ctx.lineWidth = 10;
+    // ctx.strokeRect(300,300,50,50)
+    //
+    // ctx.rect(400,400,50,50)
+    // ctx.stroke();
+
+    // ctx.strokeStyle = 'rgb(22,2,22)';
+    // ctx.moveTo(10,10)
+    // ctx.lineWidth = 10;
+    // ctx.lineTo(100,200)
+    // ctx.lineCap = 'round';
+    // ctx.lineJoin = 'round';
+    // ctx.lineTo(100,300)
+    // ctx.lineTo(200,300)
+    // ctx.stroke();
+    // ctx.arc(150,100, 50, 0, 360/180*Math.PI, true);
+    // ctx.stroke();
+    ctx.moveTo(0,5);
+
+    ctx.arcTo(200, 5, 5,190,40);
+    ctx.moveTo(0,5);
+    ctx.lineTo(200,5);
+    ctx.lineTo(5,190);
+
+    ctx.stroke();
+</script>
+</body>
+</html>

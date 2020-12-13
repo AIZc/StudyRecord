@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        a{
+            display: block;
+            width: 100px;
+            height: 100px;
+            background-color: green;
+        }
+    </style>
+</head>
+
+<body>
+<!--target 可以指向ulbody下的所有标签-->
+<ul>
+    <li>11</li>
+    <li>22</li>
+    <li>33</li>
+    <li>44</li>
+    <li>55</li>
+    <li>66</li>
+    <li>77</li>
+    <li>88</li>
+    <li>99<a href="javascript:;">aa</a></li>
+    <li>1010</li>
+</ul>
+<script>
+    var body = document.querySelector('body')
+    body.addEventListener('click',function (event) {
+        var a = event.target
+        console.log(a.innerHTML)
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{
+            width: 300px;
+            height: 300px;
+            background-color: pink;
+        }
+        div.box{
+
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+<div id="pp">
+
+</div>
+<!--    <h1 id="btn">标题</h1>-->
+
+<!--    <button id="count-btn">点我加数</button>-->
+<img src="img/1.jpg" alt="" id="img-src">
+<input id='btn' type="button" value="按钮">
+<!--<a id="shift-load" href="https://www.baidu.com">百度</a>-->
+<!--<input type="checkbox" id="check">-->
+</body>
+<script>
+    // window.onload = function () {
+    //     var btn = document.getElementById('btn')
+    //     btn.onclick = function (){
+    //         alert('点了一下标题')
+    //     }
+    //
+    //
+    //
+    //     var num = 0;
+    //     var CountBtn = document.getElementById('count-btn')
+    //     CountBtn.onclick = function (){
+    //         num++;
+    //         alert(num)
+    //     }
+    //
+    // }
+
+    // window.onload = function () {
+    //     var ImgBtn = document.getElementById('img-btn')
+    //     var a = document.getElementById('shift-load')
+    //     for (let i = 0;i<6;i++){
+    //     ImgBtn.onclick = function () {
+    //         a.href = 'https://www.taobao.com'
+    //         a.innerText = "淘宝"
+    //     }
+    //     }
+    // }
+    //
+    // window.onload = function () {
+    //     var Btn = document.getElementById('btn')
+    //     var div = document.getElementById('pp')
+    //     btn.onclick = function () {
+    //         div.className = 'box'
+    //     }
+    // }
+    window.onload = function () {
+        var imgArr = ['img/1.jpg','img/2.jpg','img/3.jpg','img/4.jpg','img/5.jpg','img/6.jpg']
+        var btn = document.getElementById('btn')
+        var img = document.getElementById('img-src')
+        var num = 0
+        btn.onclick = function () {
+            num++;
+            img.src = imgArr[num%imgArr.length]
+        }
+    }
+
+
+</script>
+</html>

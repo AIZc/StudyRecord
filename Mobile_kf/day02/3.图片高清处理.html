@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #clear_box{
+            width: 200px;
+            height: 200px;
+            background-image: url(image/logo.png);
+            background-size: 100%;
+        }
+        #box{
+            width: 200px;
+            height: 200px;
+            background-image: url(image/logo.png);
+            background-size: 100%;
+        }
+        @media screen and (-webkit-min-device-pixel-ratio: 2) {
+            #clear_box{
+                background-image: url(image/logo@2x.png);
+            }
+        }
+        @media screen and (-webkit-min-device-pixel-ratio: 3) {
+            #clear_box{
+                background-image: url(image/logo@3x.png);
+        }
+        }
+
+    </style>
+</head>
+<body>
+    <div id="clear_box"></div>
+    <div id="box"></div>
+</body>
+</html>

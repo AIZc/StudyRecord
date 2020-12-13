@@ -1,0 +1,15 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+ul {
+  list-style: none;
+}
+#box {
+  width: 9.33333333rem;
+  /* 本有大小除以37.5 */
+  height: 1.33333333rem;
+  margin: 0.8rem auto;
+  background-color: pink;
+}
+/*# sourceMappingURL=app.css.map */

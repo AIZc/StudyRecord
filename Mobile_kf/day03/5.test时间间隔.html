@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul{
+            list-style: none;
+        }
+        #box{
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+<div id="box"></div>
+<script type="text/javascript">
+    var box = document.getElementById('box')
+    // var t1 = 0
+    box.addEventListener('touchstart',function () {
+        console.log('touchstart')
+        // t1 = Date.now()
+        // console.log(t1)
+        this.t1 = Date.now()
+        console.log(this.t1)
+    })
+    box.addEventListener('click',function () {
+        console.log('click')
+        // var t2 = new Date()
+        // console.log(t2.getTime()-t1)
+        this.t2 = Date.now()
+        console.log(this.t2-this.t1)
+    })
+</script>
+</body>
+
+</html>

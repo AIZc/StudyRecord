@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul{
+            list-style: none;
+        }
+        #huaban{
+            border: 1px solid black;
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+<canvas id="huaban" width="1000" height="600"></canvas>
+<script type="text/javascript">
+	let canvas = document.querySelector('#huaban')
+    let isDown = false;
+    let ctx = canvas.getContext('2d')
+    canvas.addEventListener('mouseover',function () {
+        canvas.addEventListener('mousedown',function (e) {
+            //开始绘制
+            isDown = true
+            ctx.beginPath()
+            //移动到起始点
+            ctx.moveTo(e.offsetX, e.offsetY)
+        })
+        canvas.addEventListener('mousemove',function (e) {
+            if (isDown){
+                ctx.lineTo(e.offsetX,e.offsetY)
+                ctx.stroke()
+            }
+        })
+        canvas.addEventListener('mouseup',function () {
+            isDown = false
+        })
+
+    })
+    canvas.addEventListener('mouseout',function () {
+        isDown = false
+    })
+
+</script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="f073ea5c-71d7-435b-93cd-8415f92585c7" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ProjectId" id="1jVBYLMg5X32LEuPRWo3MAgT49N" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="NewWatcherDialog.advanced.open" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../yuicompressor-2.4.8.jar" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="settings.editor.selected.configurable" value="watcher.settings" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f073ea5c-71d7-435b-93cd-8415f92585c7" name="Default Changelist" comment="" />
+      <created>1603879425305</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1603879425305</updated>
+      <workItem from="1603879426321" duration="2234000" />
+      <workItem from="1604920256240" duration="688000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="1063" y="517" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1603881669559">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="1063" y="517" key="#com.intellij.fileTypes.FileTypeChooser/2560.175.1536.832/0.0.2560.1400@0.0.2560.1400" timestamp="1603881669559" />
+    <state x="1165" y="523" key="#com.intellij.ide.macro.MacrosDialog" timestamp="1603880961775">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="1165" y="523" key="#com.intellij.ide.macro.MacrosDialog/2560.175.1536.832/0.0.2560.1400@0.0.2560.1400" timestamp="1603880961775" />
+    <state x="1176" y="680" key="#com.intellij.tools.ToolEditorDialog" timestamp="1603881306575">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="1176" y="680" key="#com.intellij.tools.ToolEditorDialog/2560.175.1536.832/0.0.2560.1400@0.0.2560.1400" timestamp="1603881306575" />
+    <state x="1189" y="609" width="689" height="687" key="EditFileWatcherDialog" timestamp="1603881235501">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="1189" y="609" width="689" height="687" key="EditFileWatcherDialog/2560.175.1536.832/0.0.2560.1400@0.0.2560.1400" timestamp="1603881235501" />
+    <state x="1165" y="572" key="FileChooserDialogImpl" timestamp="1603881200394">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="1165" y="572" key="FileChooserDialogImpl/2560.175.1536.832/0.0.2560.1400@0.0.2560.1400" timestamp="1603881200394" />
+    <state x="886" y="462" key="SettingsEditor" timestamp="1603881376193">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="886" y="462" key="SettingsEditor/2560.175.1536.832/0.0.2560.1400@0.0.2560.1400" timestamp="1603881376193" />
+  </component>
+</project>

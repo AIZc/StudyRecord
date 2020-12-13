@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul{
+            list-style: none;
+        }
+        #box{
+            width: 100px;
+            height: 100px;
+            background-color: greenyellow;
+        }
+    </style>
+</head>
+<body>
+<div id="box"></div>
+<input type="text">
+<script type="text/javascript">
+	var box = document.querySelector('#box')
+    var input = document.querySelector('input')
+    // // var body = document.querySelector('body')
+    // box.addEventListener('mousedown',function () {
+    //     console.log(11)
+    // })
+    // input.addEventListener('focus',function () {
+    //     console.log('focus')
+    // })
+    // input.addEventListener('keyup',function () {
+    //     console.log(22)
+    // })
+    // box.addEventListener('mousewheel',function () {
+    //     console.log('移动了滚轮')
+    // })
+    box.addEventListener('touchcancel',function () {
+        box.style.backgroundColor = 'red'
+    })
+    setTimeout(function () {
+        alert('打断了')
+    },3000)
+
+    box.addEventListener('touchmove')
+
+
+
+    
+</script>
+</body>
+</html>

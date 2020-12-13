@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul{
+            list-style: none;
+        }
+        #box{
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+            position: absolute;
+            left: 0;
+        }
+        #end{
+            width: 100px;
+            height: 100px;
+            /*background-color: pink;*/
+            position: absolute;
+            left: 400px;
+            box-sizing: border-box;
+            border: 1px dashed grey;
+        }
+    </style>
+</head>
+<body>
+<div id="box"></div>
+<div id="end"></div>
+<script type="text/javascript">
+    function linear(t,b,c,d) {
+        return c*(t/=d)*t*t + b;
+    }
+    var t = 0
+    var box = document.querySelector('#box')
+    var timer = setInterval(function () {
+        //修改元素的位置
+        t+=1;
+        var left = linear(t,0,400,2000)
+        box.style.left = left+'px';
+        if (t>=2000){
+            clearInterval(timer)
+        }
+    },1)
+
+</script>
+</body>
+</html>

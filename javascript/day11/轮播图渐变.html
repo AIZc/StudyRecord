@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        #banner-wrapper{
+            margin: 0 auto;
+            width: 400px;
+            height: 400px;
+        }
+        #banner{
+            position: relative;
+        }
+        #banner-img{
+            width: 100%;
+        }
+        #banner-nav-btn{
+            display: flex;
+            justify-content: space-between;
+            width: 100px;
+            position: absolute;
+            bottom: 15px;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            opacity: 0;
+            transition: opacity 1s;
+        }
+        #banner-nav-btn li{
+            width: 13px;
+            height: 13px;
+            background-color: lightgray;
+            border-radius: 50%;
+        }
+
+        .lrbtn{
+            position: absolute;
+            height: 40px;
+            width: 25px;
+            top: 180px;
+            color: #656565;
+            font-size: 25px;
+            font-weight: bolder;
+            text-align: center;
+            line-height: 40px;
+            opacity: 0;
+            transition: opacity 1s;
+        }
+        #banner-left{
+            left: 0;
+            background-color: lightgray;
+            border-radius: 0 50% 50% 0;
+        }
+        #banner-right{
+            right: 0;
+            background-color: lightgray;
+            border-radius: 50% 0 0 50%;
+        }
+    </style>
+</head>
+<body>
+    <div id="banner-wrapper">
+        <div id="banner">
+            <ul>
+                <li>
+                    <a href="javascript:;">
+                        <img id="banner-img" src="img/1.jpg" alt="">
+                    </a>
+                </li>
+            </ul>
+            <ul id="banner-nav-btn">
+                <li id="mr"></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+            <div  class="lrbtn" id="banner-left"><</div>
+            <div  class="lrbtn" id="banner-right">></div>
+        </div>
+    </div>
+</body>
+<script>
+    window.onload = function () {
+        var bannerNavBtn = document.getElementById('banner-nav-btn')
+        var navBtn = document.querySelectorAll('#banner-nav-btn>li')
+        var firstNavBtn = document.getElementById('mr')
+        var banImg = document.getElementById('banner-img')
+        var banner = document.getElementById('banner')
+        var imgs = ['img/1.jpg','img/2.jpg','img/3.jpg','img/4.jpg','img/5.jpg','img/6.jpg',]
+        var lrBtn = document.getElementsByClassName('lrbtn')
+        var leftBtn = document.getElementById('banner-left')
+        var rightBtn = document.getElementById('banner-right')
+    //  导航按钮切换图片事件
+        firstNavBtn.style.backgroundColor = 'gray'
+        for (let i=0;i<navBtn.length;i++){
+            navBtn[i].onclick = function (){
+                banImg.src = imgs[i]
+                navBtn[i].style.backgroundColor = 'grey'
+                for(let j=0;j<navBtn.length;j++){
+                    if (navBtn[i]!==navBtn[j]){
+                        navBtn[j].style.backgroundColor = 'lightgrey'
+                    }
+                }
+            }
+        }
+        //  向前向后切换图片事件
+
+
+
+    //    鼠标移入移出图片变化
+        banner.onmouseenter = function () {
+            bannerNavBtn.style.opacity = 1
+            for (let i=0;i<lrBtn.length;i++){
+                lrBtn[i].style.opacity = 1
+                lrBtn[i].style.backgroundColor = 'grey'
+                lrBtn[i].style.color = 'white'
+                lrBtn[i].style.cursor = 'default'
+            }
+        }
+        banner.onmouseleave = function () {
+            bannerNavBtn.style.opacity = 0
+            for (let i=0;i<lrBtn.length;i++){
+                lrBtn[i].style.opacity = 0
+            }
+        }
+    }
+</script>
+</html>

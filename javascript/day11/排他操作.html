@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        p{
+            background-color: greenyellow;
+            width: 300px;
+            height: 50px;
+        }
+    </style>
+</head>
+<body>
+<p class="pp">&nbsp;</p>
+<p class="pp">&nbsp;</p>
+<p class="pp">&nbsp;</p>
+<p class="pp">&nbsp;</p>
+</body>
+<script>
+    window.onload = function (){
+        var PList = document.getElementsByClassName('pp')
+        for (let i=0;i<PList.length;i++) {
+            PList[i].onclick = function () {
+                for (let j=0;j<PList.length;j++){
+                    PList[j].innerHTML = '哈哈'
+                }
+                PList[i].innerHTML = '你刚刚点了我'
+            }
+            PList[i].onmouseover = function (){
+                PList[i].style.backgroundColor = 'green'
+            }
+            // PList[i].onmouseout = function (){
+            //     PList[i].style.backgroundColor = 'greenyellow'
+            // }
+        }
+        var ss = document.querySelector('p')
+        alert(ss)
+    }
+</script>
+</html>

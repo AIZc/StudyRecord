@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul{
+            list-style: none;
+        }
+        canvas{
+            border: solid 1px black;
+        }
+    </style>
+</head>
+<body>
+<canvas></canvas>
+<script type="text/javascript">
+	let canvas = document.querySelector('canvas')
+    canvas.width = 500;
+	canvas.height = 300;
+
+	//获取画笔
+    let ctx = canvas.getContext('2d')
+
+    //操作图片
+    // let img = new Image;
+    let img = document.createElement('img');
+    //设置src
+    img.src = './img/zhangdachao.png'
+
+    img.onload = function () {
+        ctx.drawImage(img,0,0,200,img.height/img.width*200)
+    }
+</script>
+</body>
+</html>
