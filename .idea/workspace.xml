@@ -470,6 +470,7 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Mobile_kf/day06/音悦台/js/app.js" root0="FORCE_HIGHLIGHTING" />
   </component>
+  <component name="JupyterTrust" id="7535c4e1-6256-43c4-bfe5-964f1406937e" />
   <component name="ProjectId" id="1kMP8QwdJsbpmsYBUEc8lKoX6Dk" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -522,7 +523,6 @@
     <recent_temporary>
       <list>
         <item itemvalue="JavaScript Debug.index.html" />
-        <item itemvalue="Node.js.index.js" />
       </list>
     </recent_temporary>
   </component>
@@ -566,6 +566,8 @@
       <workItem from="1607848027386" duration="108000" />
       <workItem from="1607848235707" duration="239000" />
       <workItem from="1607848520608" duration="105000" />
+      <workItem from="1607848764711" duration="32000" />
+      <workItem from="1607848812814" duration="29000" />
     </task>
     <servers />
   </component>
