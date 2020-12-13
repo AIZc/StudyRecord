@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="ed996e18-3583-4557-9777-2d150f372820" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Mobile_kf/day06/音悦台/js/app.js" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="ProjectId" id="1kMP8QwdJsbpmsYBUEc8lKoX6Dk" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.standard" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.standard" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.standard" value="" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="restartRequiresConfirmation" value="false" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\58347\Desktop" />
+      <recent name="C:\Users\58347\Desktop\web_load\Mobile_kf\day11\img" />
+      <recent name="C:\Users\58347\Desktop\web_load\Mobile_kf\day10\mp3" />
+      <recent name="C:\Users\58347\Desktop\web_load\Mobile_kf\day09\相册\js" />
+      <recent name="C:\Users\58347\Desktop\web_load\Mobile_kf\day10\js" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\58347\Desktop\web_load\Mobile_kf\day12\img" />
+      <recent name="C:\Users\58347\Desktop\web_load\Mobile_kf\day10\mp3" />
+      <recent name="C:\Users\58347\Desktop\web_load\Mobile_kf\day10" />
+      <recent name="C:\Users\58347\Desktop\web_load\Mobile_kf\day10\img" />
+      <recent name="C:\Users\58347\Desktop\web_load\Mobile_kf\day05" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JavaScript Debug.index.html">
+    <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:8888/web_load/Mobile_kf/day09/相册/index.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="index.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/Mobile_kf/day09/相册/js/index.js" working-dir="$PROJECT_DIR$/Mobile_kf/day09/相册/js">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JavaScript Debug.index.html" />
+        <item itemvalue="Node.js.index.js" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ed996e18-3583-4557-9777-2d150f372820" name="Default Changelist" comment="" />
+      <created>1605507330240</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1605507330240</updated>
+      <workItem from="1605507331792" duration="19170000" />
+      <workItem from="1605591894447" duration="859000" />
+      <workItem from="1605595138663" duration="19615000" />
+      <workItem from="1605675805540" duration="22761000" />
+      <workItem from="1605760631331" duration="25338000" />
+      <workItem from="1605851022125" duration="12147000" />
+      <workItem from="1605936457024" duration="6863000" />
+      <workItem from="1605953692593" duration="1200000" />
+      <workItem from="1606029161515" duration="5882000" />
+      <workItem from="1606212300701" duration="69000" />
+      <workItem from="1606380406917" duration="12919000" />
+      <workItem from="1606897152732" duration="12179000" />
+      <workItem from="1606973315266" duration="3747000" />
+      <workItem from="1606978315832" duration="1356000" />
+      <workItem from="1606988240906" duration="8020000" />
+      <workItem from="1606997988021" duration="3456000" />
+      <workItem from="1607062501955" duration="8404000" />
+      <workItem from="1607151952355" duration="4905000" />
+      <workItem from="1607162657695" duration="10436000" />
+      <workItem from="1607246287078" duration="2775000" />
+      <workItem from="1607312930987" duration="18992000" />
+      <workItem from="1607394112468" duration="19643000" />
+      <workItem from="1607480461623" duration="18224000" />
+      <workItem from="1607570067103" duration="12708000" />
+      <workItem from="1607844133462" duration="663000" />
+      <workItem from="1607844935379" duration="65000" />
+      <workItem from="1607845059751" duration="1192000" />
+      <workItem from="1607847813192" duration="63000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/git/learngit" />
+      <path value="$PROJECT_DIR$" />
+    </ignored-roots>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/web_load$index_html.dat" NAME="index.html Coverage Results" MODIFIED="1606997308165" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="WipCoverageRunner" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+  </component>
+</project>
