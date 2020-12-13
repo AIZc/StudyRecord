@@ -1,2 +1,3 @@
 # weblog
-my web study log.
+
+记录了自己的学习过程~啊哈哈哈
