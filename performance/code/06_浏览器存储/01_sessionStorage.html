@@ -29,18 +29,18 @@
   //从sessionStorage里取出数据
   btn2.onclick = function () {
     console.log(JSON.parse(sessionStorage.getItem('person')));
+    console.log(sessionStorage.getItem('demo'));
   }
 
   //从sessionStorage里删除数据
   btn3.onclick = function () {
     sessionStorage.removeItem('person')
+    sessionStorage.removeItem('demo')
   }
-
   //从sessionStorage里清空数据
   btn4.onclick = function () {
     sessionStorage.clear()
   }
-
 </script>
 </body>
 </html>

@@ -16,24 +16,21 @@
   *   实现： 定时器。
   *   应用：搜索时等用户完整输入内容后再发送查询请求。
   * */
-  
-  let input = document.getElementById('user_input')
-  let timeid
-  input.onkeyup = function () {
-    if(timeid){
-      clearTimeout(timeid)
+
+  let input = document.querySelector('#user_input')
+  let timeId
+  input.addEventListener('keyup',function () {
+    if (timeId){
+      clearTimeout(timeId)
     }
-    timeid = setTimeout(function () {
-      let value = input.value
-      rendRequest(value)
-    },300)
-  }
-  
+    timeId = setTimeout(function () {
+      rendRequest(input.value)
+    },200)
+  })
+
   function rendRequest(data) {
-    console.log(`发送了请求，内容是${data}`)
+    console.log(data)
   }
-  
-  
 </script>
 </body>
 </html>
