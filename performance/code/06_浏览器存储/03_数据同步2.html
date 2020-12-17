@@ -1,19 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>数据同步2</title>
+    <meta charset="UTF-8">
+    <title>数据同步2</title>
 </head>
 <body>
 <input type="text" id="val">
 <script type="text/javascript">
 
-window.addEventListener('storage',function (event) {
-  console.log(event)
-  let val = document.getElementById('val')
-  val.value = event.newValue
-})
-  
+    window.addEventListener('storage', function (event) {
+        console.log(event)
+        let val = document.getElementById('val')
+        val.value = event.newValue
+
+    })
+
+    // 自己复习一下es6 的 class
+    class User {
+        constructor(name) {
+            this.name = name
+        }
+
+        showInOf() {
+            alert(this.name)
+        }
+    }
+
+    user = new User('charlie')
+    user.showInOf()
+
+    function people() {
+        console.log(11)
+    }
+
+    console.log(typeof User);
 </script>
 </body>
 </html>
