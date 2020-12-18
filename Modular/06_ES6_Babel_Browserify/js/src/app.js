@@ -26,7 +26,7 @@ import module3 from './module3'
 //import * as module3 from './module3'
 
 //引入module4，module4里用了多种暴露的方式
-import module4,{arr0,bar,foo,str,student,d1} from './module4'
+// import module4,{arr0,bar,foo,str,student,d1} from './module4'
 
 //引入第三方模块uniq，几乎所有的第三方模块，都用默认暴露的方式。
 import uniq from 'uniq'
@@ -41,8 +41,8 @@ console.log(module3.age)
 module3.speak()*/
 console.log(module3)
 console.log(uniq([1, 3, 3, 3, 2, 5, 4, 6, 7, 9, 8, 11, 10]));
-console.log(arr0,str,student,d1)
-bar()
-foo()
-d1.run()
-console.log(module4)
+// console.log(arr0,str,student,d1)
+// bar()
+// foo()
+// d1.run()
+// console.log(module4)

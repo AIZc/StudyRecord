@@ -10,7 +10,9 @@ function demo2() {
 }
 
 function test2() {
-  console.log('我是module2里的test2函数',arr)
+  setTimeout(()=>{
+    console.log('我是module2里的test2函数',arr)
+  },1000)
 }
 
 //统一暴露(精简版写法)

@@ -8,10 +8,11 @@ exports.test1 = test1;
 /*
 * module1使用了【分别暴露】的方式
 * */
+
 var data = exports.data = 'atguigu';
 
 function demo1() {
-  console.log('我是module1里的demo函数', data.toUpperCase());
+  console.log('\u6211\u662Fmodule1\u91CC\u7684demo\u51FD\u6570', data.toUpperCase());
 }
 
 function test1() {
