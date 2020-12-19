@@ -1,3 +1,9 @@
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.getName = getName;
 /*
 * module1使用了【分别暴露】的方式
 * */
@@ -17,7 +23,7 @@
 let a = 1
 console.log(a)
 alert(1)*/
-export let name = 'XueRui'
-export function getName() {
+var name = exports.name = 'XueRui';
+function getName() {
     console.log(name.toUpperCase());
 }

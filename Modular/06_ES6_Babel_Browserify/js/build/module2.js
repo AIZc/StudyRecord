@@ -1,3 +1,8 @@
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
 /*
 * module2，使用的是【统一暴露】
 * */
@@ -25,15 +30,11 @@ export {
   test2 as haha2
 }*/
 
-let name = 'ZhangChao'
+var name = 'ZhangChao';
 
 function getName() {
     console.log(name.toUpperCase());
 }
 
-export {
-    name as nameZ,
-    getName as getNameZ
-}
-
-
+exports.nameZ = name;
+exports.getNameZ = getName;
