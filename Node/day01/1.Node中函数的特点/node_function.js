@@ -14,7 +14,7 @@
 * */
 
 //想瞧一瞧那个外层函数，外层函数到底接收了什么参数？
-//console.log(arguments.callee.toString()) //输出外层函数
+// console.log(arguments.callee.toString()) //输出外层函数
 
 //如何在一个函数体里，输出函数本身？
 /*function demo() {
