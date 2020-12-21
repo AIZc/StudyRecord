@@ -13,6 +13,7 @@
 *
 * */
 
+
 //想瞧一瞧那个外层函数，外层函数到底接收了什么参数？
 // console.log(arguments.callee.toString()) //输出外层函数
 
@@ -25,6 +26,7 @@ console.log(__filename)
 
 console.log(__dirname)
 
+console.log(global);
 
 
 

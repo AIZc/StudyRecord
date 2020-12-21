@@ -35,6 +35,8 @@ setTimeout: 设置延迟定时器
   process.nextTick() ---- 用于设置立即执行函数(“VIP”-----能在任意阶段优先执行)
 */
 
+
+
 //延迟定时器
 setTimeout(()=>{
   console.log('setTimeout所指定的回调函数执行了')
@@ -42,13 +44,13 @@ setTimeout(()=>{
 
 //立即执行函数（回调）
 setImmediate(()=>{
-   console.log('我是setImmediate指定的回调') 
+    console.log('我是setImmediate指定的回调')
 })
 
 //立即执行函数（回调）
-process.nextTick(()=>{
-   console.log('process.nextTick所指定的回调执行了')
-})
-
-console.log('我是主线程上的代码')
+// process.nextTick(()=>{
+//    console.log('process.nextTick所指定的回调执行了')
+// })
+//
+// console.log('我是主线程上的代码')
 

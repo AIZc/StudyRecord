@@ -53,7 +53,7 @@
             1.npm aduit fix :检测项目依赖中的一些问题，并且尝试着修复。
 
             2.npm view xxxxx versions :查看远程npm仓库中xxxx包的所有版本信息
-
+45
             3.npm view xxxxx version :查看npm仓库中xxxx包的最新版本
 
             4.npm ls xxxx :查看我们所安装的xxxx包的版本

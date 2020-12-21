@@ -26,5 +26,3 @@ setTimeout: 设置延迟定时器
 
 
 //在Node中禁止函数的this指向global，而是指向了一个空对象
-console.log(this)
-console.log(global)
