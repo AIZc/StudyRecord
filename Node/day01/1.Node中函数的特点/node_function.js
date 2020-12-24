@@ -11,16 +11,17 @@
 *     1).用于支持模块化语法
 *     2).隐藏服务器内部实现(从作用域角度去看)
 *
-* */
+*
+*/
 
 
 //想瞧一瞧那个外层函数，外层函数到底接收了什么参数？
 // console.log(arguments.callee.toString()) //输出外层函数
 
 //如何在一个函数体里，输出函数本身？
-/*function demo() {
+function demo() {
   console.log(arguments.callee.toString()) //输出demo函数
-}*/
+}
 
 console.log(__filename)
 
