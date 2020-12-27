@@ -5,7 +5,7 @@ const express = require('express')
 const app = express()
 app.get('/',function (request, response) {
     console.log(request.query)
-    response.send('我是主页!')
+    response.send('get')
 })
 
 app.get('/ms',function (request, response) {
@@ -17,7 +17,7 @@ app.get('/ms/c17',function (request, response) {
 })
 
 app.post('/',function (request, response) {
-    response.send('post请求')
+    response.send('post')
 })
 
 app.listen(8000,function (err) {
