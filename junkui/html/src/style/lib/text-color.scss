@@ -1,7 +1,0 @@
-@import "var";
-
-@each $name, $color in $text-colors {
-  .text-#{$name} {
-    color: $color;
-  }
-}
