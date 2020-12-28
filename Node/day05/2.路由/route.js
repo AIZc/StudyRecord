@@ -26,7 +26,7 @@ let app = express()
 
 //根路由
 app.get('/',function (request,response) {
-  console.log(request.query)
+  console.log(request.get('referer'),request.get('host'))
   //console.log(request.get('Host'))
   //console.log(request.get('Referer'))
   response.send('250') //send方法里不能传入纯数字，express会当成状态码
@@ -34,7 +34,7 @@ app.get('/',function (request,response) {
 
 //根路由
 app.post('/',function (request,response) {
-  console.log(request.query)
+  console.log(request.body)
   response.send('我是根路由返回的数据--post')
 })
 
@@ -49,15 +49,15 @@ app.get('/demo',function (request,response) {
   *   5.服务器告诉浏览器重定向
   *   备注：多个响应以response.send为主
   * */
-  //response.download('./public/vue.png')
-  //response.sendFile(__dirname+'/public/demo.zip')
-  //response.redirect('https://www.baidu.com')
-  //response.redirect('/demo/test')
-  //response.set('demo','0719')
-  //response.status(200)
-  response.send('我是demo路由返回的数据')
-  //console.log(response.get('demo'));
-  //response.send('等等我还有点东西') //会抛一个异常，不能send两次
+  // response.download('./public/vue.png')
+  // response.sendFile(__dirname+'/public/haha.html')
+  // response.redirect('https://www.baidu.com')
+  // response.redirect('/demo/test')
+  // response.set('demo','0719')
+  // response.send('我是demo路由返回的数据')
+  // console.log(response.get('demo'));
+  // response.status(909)
+  response.send('等等我还有点东西') //会抛一个异常，不能send两次
 })
 
 //二级路由
