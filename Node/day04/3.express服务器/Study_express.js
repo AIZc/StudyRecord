@@ -3,6 +3,8 @@
 const express = require('express')
 
 const app = express()
+//禁止服务器返回x-powered-by
+app.disable('x-powered-by')
 app.get('/',function (request, response) {
     console.log(request.query)
     response.send('get')

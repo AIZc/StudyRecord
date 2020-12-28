@@ -1,0 +1,7 @@
+$types: (baseline, sub, super, top, text-top, middle, bottom, text-bottom, inherit);
+
+@each $type in $types {
+  .v-a-#{$type} {
+    vertical-align: $type;
+  }
+}

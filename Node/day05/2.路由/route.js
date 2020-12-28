@@ -26,7 +26,7 @@ let app = express()
 
 //根路由
 app.get('/',function (request,response) {
-  //.log(request.query)
+  console.log(request.query)
   //console.log(request.get('Host'))
   //console.log(request.get('Referer'))
   response.send('250') //send方法里不能传入纯数字，express会当成状态码
@@ -34,7 +34,7 @@ app.get('/',function (request,response) {
 
 //根路由
 app.post('/',function (request,response) {
-  console.log(request.body)
+  console.log(request.query)
   response.send('我是根路由返回的数据--post')
 })
 
@@ -73,7 +73,7 @@ app.get('/meishi/:id',function (request,response) {
 })
 
 
-app.listen(3000,function (err) {
-  if(!err) console.log('ok')
-  else console.log(err)
+app.listen(8000,function (err) {
+    if (err) console.log(err);
+    else console.log('服务器启动成功!');
 })

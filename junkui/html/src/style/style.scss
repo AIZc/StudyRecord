@@ -1,0 +1,15 @@
+html, body {
+    height: 100%;
+}
+.h-main {
+    height: calc(100% - 40px);
+}
+.bg-main {
+    background: #f3f3f3;
+}
+.bg-main-grey {
+    background: #e3e3e3;
+}
+.box-shadow-grey {
+    box-shadow: 0 0 15px #e0e0e0;
+}

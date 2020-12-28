@@ -1,0 +1,56 @@
+@import "var";
+
+/**
+ *  margin padding
+ *  @each 循环多次保证优先级
+ */
+
+.m-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@each $size in $box-sizes {
+  .m-#{$size}, .margin-#{$size} {
+    margin: #{$size}px;
+  }
+  @if $size >= 0 {
+    .p-#{$size}, .padding-#{$size} {
+      padding: #{$size}px;
+    }
+  }
+}
+
+@each $size in $box-sizes {
+  .m-h-#{$size} {
+    margin-left: #{$size}px;
+    margin-right: #{$size}px;
+  }
+  .m-v-#{$size} {
+    margin-top: #{$size}px;
+    margin-bottom: #{$size}px;
+  }
+  @if $size >= 0 {
+    .p-h-#{$size} {
+      padding-left: #{$size}px;
+      padding-right: #{$size}px;
+    }
+    .p-v-#{$size} {
+      padding-top: #{$size}px;
+      padding-bottom: #{$size}px;
+    }
+  }
+}
+
+@each $size in $box-sizes {
+  @each $side in top right bottom left {
+    .m-#{str-slice($side, 0, 1)}-#{$size} {
+      margin-#{$side}: #{$size}px;
+    }
+    @if $size >= 0 {
+      .p-#{str-slice($side, 0, 1)}-#{$size} {
+        padding-#{$side}: #{$size}px;
+      }
+    }
+  }
+}

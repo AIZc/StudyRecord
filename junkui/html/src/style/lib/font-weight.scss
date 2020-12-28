@@ -1,0 +1,17 @@
+.bold {
+  font-weight: bold;
+}
+
+.normal {
+  font-weight: normal;
+}
+
+.lighter {
+  font-weight: lighter;
+}
+
+@each $weight in 100, 200, 300, 400, 500, 600, 700, 800, 900 {
+  .fw-#{$weight} {
+    font-weight: $weight;
+  }
+}
