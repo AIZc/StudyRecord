@@ -43,7 +43,7 @@ db(() => {
                     console.log(`邮箱为${email}的用户注册失败，因为邮箱重复`)
                     response.send('该邮箱已被注册，请更换邮箱')
                 } else {
-                    usersModel.create({email, username, password}, (err, data) => {
+                    usersModel.create({email, username, password}, (err) => {
                         if (!err) {
                             console.log(`邮箱为${email}的用户注册成功`)
                             response.send('注册成功')
@@ -55,6 +55,23 @@ db(() => {
             })
         }
     })
+
+    app.post('/login', (request, response) => {
+        const {email, password} = request.body
+        usersModel.findOne({email,password}, (err, data) => {
+            if (err) {
+                console.log(err)
+                res.send('网络不稳定!,请重试')
+                return
+            }
+            if (data) {
+                response.redirect('http://www.baidu.com')
+            } else {
+                response.send('用户名或密码错误!')
+            }
+        })
+    })
+
 
     app.listen(8000, (err) => {
         if (!err) console.log('服务器启动成功!');
