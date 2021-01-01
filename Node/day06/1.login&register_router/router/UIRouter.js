@@ -12,13 +12,13 @@ let {resolve} = require('path')
 
 //用于展示登录界面的路由，无其他任何逻辑 ----- UI路由
 router.get('/login',(req,res)=>{
-  let url = resolve(__dirname,'../public/login.html')
+  let url = resolve(__dirname,'../public/login.ejs')
   res.sendFile(url)
 })
 
 //用于展示注册界面的路由，无其他任何逻辑 ----- UI路由
 router.get('/register',(req,res)=>{
-  let url = resolve(__dirname,'../public/register.html')
+  let url = resolve(__dirname,'../public/register.ejs')
   res.sendFile(url)
 })
 

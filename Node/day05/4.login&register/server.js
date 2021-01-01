@@ -17,12 +17,12 @@ app.use(express.urlencoded({extended:true}))
 db(()=>{
   //用于展示登录界面的路由，无其他任何逻辑 ----- UI路由
   app.get('/login',(req,res)=>{
-    res.sendFile(__dirname+'/public/login.html')
+    res.sendFile(__dirname+'/public/login.ejs')
   })
 
   //用于展示注册界面的路由，无其他任何逻辑 ----- UI路由
   app.get('/register',(req,res)=>{
-    res.sendFile(__dirname+'/public/register.html')
+    res.sendFile(__dirname+'/public/register.ejs')
   })
 
   //用于处理用户的注册请求，有很多业务逻辑(校验数据的有效性等) -------- 业务路由

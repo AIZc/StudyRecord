@@ -14,6 +14,6 @@ router.get('/login', (request, response) => {
     response.sendFile(url)
 })
 
-module.exports = () => {
+module.exports = ()=>{
     return router
 }

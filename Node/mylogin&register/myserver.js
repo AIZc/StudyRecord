@@ -14,11 +14,11 @@ app.use(express.urlencoded({extended: true}))
 
 db(() => {
     app.get('/register', (request, response) => {
-        response.sendFile(__dirname + '/public/register.html')
+        response.sendFile(__dirname + '/public/register.ejs')
     })
 
     app.get('/login', (request, response) => {
-        response.sendFile(__dirname + '/public/login.html')
+        response.sendFile(__dirname + '/public/login.ejs')
     })
 
     app.post('/register', (request, response) => {

@@ -1,8 +1,10 @@
-const {Router}  = require('express')
+const {Router} = require('express')
 
 let router = new Router()
 
 let usersModel = require('../model/usersModel')
+
+let errMsg = {}
 
 router.post('/register', (request, response) => {
     // console.log(request.body)
@@ -13,13 +15,17 @@ router.post('/register', (request, response) => {
     const passwordReg = /^[a-zA-Z0-9_!@#$%^&*]{4,20}$/
 
     if (!emailReg.test(email)) {
-        response.send('邮箱不合法')
+        // response.send('邮箱不合法')
+        errMsg.emailErr = '邮箱格式不合法!'
     } else if (!usernameReg.test(username)) {
-        response.send('用户名不合法,用户名必须由汉字组成')
+        // response.send('用户名不合法,用户名必须由汉字组成')
+        errMsg.usernameErr = '用户名不合法,用户名必须由汉字组成'
     } else if (!passwordReg.test(password)) {
-        response.send('密码不合法,密码必须有[a-zA-Z0-9_!@#$%^&*],4-20位组成')
+        // response.send('密码不合法,密码必须有[a-zA-Z0-9_!@#$%^&*],4-20位组成')
+        errMsg.passwordErr = '密码不合法,密码必须有[a-zA-Z0-9_!@#$%^&*],4-20位组成'
     } else if (password !== re_password) {
-        response.send('两次密码输入不一致')
+        // response.send('两次密码输入不一致')
+        errMsg.rePasswordErr = '两次密码输入不一致'
     } else {
         usersModel.findOne({email}, (err, data) => {
             if (data) {
@@ -41,7 +47,7 @@ router.post('/register', (request, response) => {
 
 router.post('/login', (request, response) => {
     const {email, password} = request.body
-    usersModel.findOne({email,password}, (err, data) => {
+    usersModel.findOne({email, password}, (err, data) => {
         if (err) {
             console.log(err)
             res.send('网络不稳定!,请重试')
@@ -56,6 +62,6 @@ router.post('/login', (request, response) => {
 })
 
 
-module.exports = ()=>{
+module.exports = () => {
     return router
 }

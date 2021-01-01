@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>show human</title>
+</head>
+<body>
+<h1>哈哈</h1>
+<% console.log(1) %>
+<% console.log(data); %>
+<%- data %>
+<%= name %>
+<%- name %>
+<br>
+<%
+for (let i = 0;i<persons.length;i++){
+    let item = persons[i] %>
+    <li><%-item.name%></li>
+    <li><%-item.age%></li>
+<br>
+<%} %>
+</body>
+</html>
