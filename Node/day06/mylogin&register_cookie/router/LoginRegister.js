@@ -79,7 +79,8 @@ router.post('/login', (request, response) => {
             return
         }
         if (data) {
-            response.redirect(`/user_center/?username=${data.username}`)
+            response.cookie('username',data.username,{maxAge:1000*60*60*24*30})
+            response.redirect('/user_center')
             return
         }
         errMsg.loginErr = '用户名或者密码错误'

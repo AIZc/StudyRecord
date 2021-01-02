@@ -2,6 +2,10 @@ const {Router} = require('express')
 
 let router = new Router()
 
+let cookies = require('cookie-parser')
+
+router.use(cookies())
+
 let {resolve} = require('path')
 
 router.get('/register', (request, response) => {
@@ -14,7 +18,7 @@ router.get('/login', (request, response) => {
 })
 
 router.get('/user_center',(request,response)=>{
-    let {username} = request.query
+    let {username} = request.cookies
     response.render('userCenter',{username})
 })
 
