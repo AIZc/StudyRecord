@@ -79,7 +79,7 @@ router.post('/login', (request, response) => {
             return
         }
         if (data) {
-            response.cookie('username',data.username,{maxAge:1000*60*60*24*30})
+            response.cookie('_id',data._id,{maxAge:1000*30})
             response.redirect('/user_center')
             return
         }
