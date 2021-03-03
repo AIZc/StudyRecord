@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>09_Vue实例_生命周期</title>
+</head>
+<body>
+<!--
+1. vue对象的生命周期
+  1). 初始化显示
+    * beforeCreate()
+    * created()
+    * beforeMount()
+    * mounted()
+  2). 更新状态
+    * beforeUpdate()
+    * updated()
+  3). 销毁vue实例: vm.$destory()
+    * beforeDestory()
+    * destoryed()
+2. 常用的生命周期方法
+  created()/mounted(): 发送ajax请求, 启动定时器等异步任务
+  beforeDestory(): 做收尾工作, 如: 清除定时器
+-->
+
+<div id="test">
+  <button @click="destroyVM">destroy vue</button>
+  <p v-show="isShow" ref="content">{{isShow ? 'show...' : 'hide...' }}</p>
+</div>
+
+<script type="text/javascript" src="../js/vue.js"></script>
+<script type="text/javascript">
+  new Vue({
+    el: '#test',
+    data() {
+      return {
+        isShow: true
+      }
+    },
+
+    beforeCreate() {
+      console.log('beforeCreate()', this.isShow)
+    },
+    // 实现数据代理: 后面可以通过vm读取data中的数据
+    created() {
+      console.log('created()', this.isShow)
+    },
+
+    beforeMount() {
+      console.log('beforeMount()')
+    },
+
+    // 在第一次显示之后执行1次
+    mounted() {
+      console.log('mounted()')
+      this.intervalId = setInterval(() => {
+        console.log('-----')
+        this.isShow = !this.isShow
+      }, 1000)
+    },
+
+    beforeUpdate() { // 读的是老的界面
+      console.log('beforeUpdate()', this.isShow, this.$refs.content.innerHTML)
+    },
+
+    updated() { // 读的是新的界面
+      console.log('updated()', this.isShow, this.$refs.content.innerHTML)
+    },
+
+    // 销毁之前执行1次
+    beforeDestroy() {
+      console.log('beforeDestroy()')
+      clearInterval(this.intervalId)
+    },
+
+    destroyed() {
+      console.log('destroyed()')
+    },
+
+    methods: {
+      destroyVM () {
+        this.$destroy()
+      }
+    },
+  })
+
+  
+</script>
+</body>
+</html>

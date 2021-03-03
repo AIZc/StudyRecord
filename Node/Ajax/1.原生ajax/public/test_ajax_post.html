@@ -13,7 +13,6 @@
  
   let btn = document.getElementById('btn')
   btn.onclick = function () {
-
     //1.实例化一个XMLHttpRequest对象
     let xhr = new XMLHttpRequest()
 
@@ -32,7 +31,7 @@
     //特别注意：此处是设置post请求所特有的请求头，若不设置，服务器无法获取参数
     xhr.setRequestHeader('Content-Type','application/x-www-form-urlencoded')
 
-    //4.调用send方法---------发送请求
+    //4.调用send方法---------发送请求 
     xhr.send('name=kobe&age=18')
   }
   

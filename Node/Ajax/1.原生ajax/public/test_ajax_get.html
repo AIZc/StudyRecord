@@ -94,10 +94,9 @@
             //     console.log('我是状态3')
             //     console.log(xhr.response)
             // }
-            if (xhr.readyState === 4){
-                console.log(4)
+            let demo = document.getElementById('demo')
+            if (xhr.readyState === 4 && xhr.status <= 299){
                 console.log(xhr.response)
-                let demo = document.getElementById('demo')
                 demo.innerHTML = xhr.response
             }
         })

@@ -41,7 +41,7 @@ app.use(express.static(__dirname + '/public'))
 app.get('/ajax_get', (req, res) => {
     console.log('有人发了get请求给我')
     console.log(req.query)
-    res.send('我收到了你的get请求')
+    res.send('我收到了你的get请求!!!!!!')
 })
 
 app.post('/ajax_post', (req, res) => {
