@@ -6,12 +6,13 @@ const path = require('path') // 用来解析路径相关信息的模块
 module.exports = { // 配置对象
   // 入口
   entry: {
-    xxx: path.resolve(__dirname, 'src02/index.js')
+    xxx: path.resolve(__dirname, 'src/index.js')
   },
   // 出口
   output: {
     filename: 'static/js/[name].bundle.js', // 可以带路径
-    path: path.resolve(__dirname, 'dist')
+    path: path.resolve(__dirname, 'dist'),
+    publicPath:'/'
   },
 
   // 模块加载器
@@ -21,11 +22,25 @@ module.exports = { // 配置对象
       {
         test: /\.js$/, // 用于匹配文件(对哪些文件进行处理)
         // exclude: /node_modules/,
-        include: [path.resolve(__dirname, 'src02')], // 只针对哪些处理
+        include: [path.resolve(__dirname, 'src')], // 只针对哪些处理
         use: {
           loader: 'babel-loader',
           options: {
-            presets: ['@babel/preset-env'], // 预设包: 包含多个常用插件包的一个大包
+            presets: [
+              ['@babel/preset-env', {
+                useBuiltIns: 'usage',
+                'corejs': 2 // 处理一些新语法的实现
+              }]
+            ], // 预设包: 包含多个常用插件包的一个大包
+
+            plugins: [
+              
+              ['babel-plugin-component', {
+                "libraryName": "mint-ui", // 针对mint-ui库实现按需引入打包
+                "style": true // 自动打包对应的css
+              }]
+            ]
+            // Error: .plugins[0][1] must be an object, false, or undefined
           }
         }
       },
@@ -68,6 +83,25 @@ module.exports = { // 配置对象
     port: 8080,
     open: true, // 自动打开浏览器
     // quiet: true, // 不做太多日志输出
+    proxy: {
+      // 处理以/api开头路径的请求
+      // '/api': 'http://localhost:4000'   // http://localhost:4000/api/search/users
+      '/api': {
+        target: 'http://localhost:4000', // 转发的目标地址
+        pathRewrite: {
+          '^/api' : ''  // 转发请求时去除路径前面的/api
+        },
+      },
+
+      '/gh': {
+        target: 'https://api.github.com', // 转发的目标地址
+        pathRewrite: {
+          '^/gh' : ''  // 转发请求时去除路径前面的/api
+        },
+        changeOrigin: true, // 支持跨域, 如果协议/主机也不相同, 必须加上
+      }
+    },
+    historyApiFallback:true
   },
 
   // 开启source-map调试
@@ -78,6 +112,8 @@ module.exports = { // 配置对象
     extensions: ['.js', '.vue', '.json'], // 可以省略的后缀名
     alias: { // 路径别名(简写方式)
       'vue$': 'vue/dist/vue.esm.js',  // 表示精准匹配   带vue编译器
+      '@': path.resolve(__dirname, 'src'),
+      '@components': path.resolve(__dirname, 'src/components'),
     }
   }
 }
