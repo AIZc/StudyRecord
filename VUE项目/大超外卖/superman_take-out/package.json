@@ -12,6 +12,7 @@
     "lib-flexible": "^0.3.2",
     "postcss-px2rem": "^0.3.0",
     "stylus-loader": "3.0.2",
+    "vant": "^2.12.9",
     "vue": "^2.6.11",
     "vue-router": "^3.5.1"
   },

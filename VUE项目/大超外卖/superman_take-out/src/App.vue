@@ -1,15 +1,16 @@
 <template>
-	<div>
-    <router-link to="Search"></router-link>
+  <div>
+    <tabbar></tabbar>
     <router-view></router-view>
-    <router-view></router-view>
-	</div>
+  </div>
 </template>
 
 <script>
+import tabbar from "@/components/tabbar/tabbar";
 
 export default {
-	name: "App",
+  name: "App",
+  components: {tabbar}
 }
 </script>
 
