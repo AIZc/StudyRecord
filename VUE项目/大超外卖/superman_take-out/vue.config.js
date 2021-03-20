@@ -7,6 +7,7 @@ const postcss = px2rem({
 module.exports = {
     runtimeCompiler:true,
     lintOnSave:false,  //关闭eslint的规则
+    productionSourceMap: false,  // 不生成 source map文件
     css: { // 添加postcss配置
         loaderOptions: {
             postcss: {
@@ -16,4 +17,24 @@ module.exports = {
             }
         }
     },
+    devServer: {
+        proxy: {
+            '/api': {
+                target: 'http://localhost:4000',
+                ws: true,
+                changeOrigin: true,
+                pathRewrite:{
+                    '^/api':'',
+                }
+            },
+        }
+    },
+    pluginOptions: {
+        i18n: {
+            locale: 'en',
+            fallbackLocale: 'en',
+            localeDir: 'locales',
+            enableInSFC: true
+        }
+    }
 }

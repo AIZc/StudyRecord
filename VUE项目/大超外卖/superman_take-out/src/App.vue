@@ -1,20 +1,24 @@
 <template>
-  <div>
-    <tabbar></tabbar>
+  <div id="appContainer">
     <router-view></router-view>
+    <FooterGuide v-show="$route.meta.isShowFooter"/>
   </div>
 </template>
 
 <script>
-import tabbar from "@/components/tabbar/tabbar";
-
+  import {SAVE_USER} from './store/mutations-type'
+import FooterGuide from './components/FooterGuide/FooterGuide'
 export default {
-  name: "App",
-  components: {tabbar}
+  name: 'app',
+  components: {FooterGuide},
+  async mounted(){
+    let result = await this.$API.autoLogin()
+    // 存入至Vuex中
+    this.$store.commit(SAVE_USER, result.data)
+  }
 }
 </script>
 
-<style lang="stylus" rel="stylesheet/stylus">
-@import "common/stylus/mixins.styl"
+<style lang="stylus">
 
 </style>

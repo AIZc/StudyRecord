@@ -1,12 +1,31 @@
 import Vue from 'vue'
+import 'lib-flexible/flexible'
+import './veeValidate'
+import {Button} from 'mint-ui'
+// import 'mint-ui/lib/style.css'
+import './mock/mockServer'
+
+import * as API from './api'
+import router from './router'
+import store from './store'
+import GshopHeader from './components/GshopHeader/GshopHeader'
+
 import App from './App.vue'
-import 'lib-flexible'
-import router from "@/router";
-
+import i18n from './i18n'
+import axios from "axios";
+axios.defaults.withCredentials = true
+Vue.prototype.$API = API
+Vue.component('GshopHeader', GshopHeader)
+Vue.component(Button.name, Button)
 Vue.config.productionTip = false
-
 new Vue({
-    render: h => h(App),
-    router
-}).$mount('#app')
+  el: '#app',
+  components: {App},
+  template: '<App/>',
+  router,
+  i18n,
+  store
+})
+
+
 
