@@ -13,7 +13,7 @@
             <div class="desc" v-if="info">另需配送费￥{{info.deliveryPrice}}元</div>
           </div>
           <div class="content-right">
-            <div class="pay" :class="payClass" @click="toOrderFill">
+            <div class="pay" :class="payClass" @click.prevent="toOrderFill">
               {{payContent}}
             </div>
           </div>

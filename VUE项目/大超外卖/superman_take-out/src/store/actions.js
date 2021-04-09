@@ -5,6 +5,7 @@ import {
   getShopList
 } from '../api'
 
+
 import {
   SAVE_ADDRESS,
   SAVE_CATEGORYS,
@@ -16,7 +17,7 @@ import {
 
 export default {
   async getAddressAction({commit}){
-    let result = await getAddress(40.10038,116.36867)
+    let result = await getAddress(34.395986,113.764282)
     // if(result.code === 0){
     //   commit(SAVE_ADDRESS, result.data)
     // }

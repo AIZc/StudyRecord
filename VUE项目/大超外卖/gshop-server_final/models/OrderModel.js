@@ -19,7 +19,9 @@ const orderSchema = new mongoose.Schema({
     // 总价
     'totalprices': {type: String},
     //食品内容
-    'ordercontent': {type: String}
+    'ordercontent': {type: String},
+    //店铺名称
+    'shopname': {type: String}
 })
 
 // 3. 定义Model(与集合对应, 可以操作集合)

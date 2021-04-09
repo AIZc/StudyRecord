@@ -1,5 +1,4 @@
 import ajax from './ajax'
-import qs from 'qs'
 /* 根据经纬度获取位置详情 */
 export const getAddress = (latitude, longitude) => ajax({
   url: `/position/${latitude},${longitude}`
@@ -50,8 +49,8 @@ export const loginWithUserName = ({username, pwd, captcha}) => ajax({
     needToken: false
   }
 })
-
-export const getOrder = ({username,linkman,linkphone,site,remark,totalprices,orderConent}) => ajax({
+/*添加订单*/
+export const addOrder = ({username,linkman,linkphone,site,remark,totalprices,orderConent,shopName}) => ajax({
   url: '/add_order',
   method: 'POST',
   data: {
@@ -61,7 +60,8 @@ export const getOrder = ({username,linkman,linkphone,site,remark,totalprices,ord
     site,
     remark,
     totalprices,
-    orderConent
+    orderConent:JSON.stringify(orderConent),
+    shopName
 
   },
   headers: {
@@ -69,6 +69,17 @@ export const getOrder = ({username,linkman,linkphone,site,remark,totalprices,ord
   }
 })
 
+/*读取订单*/
+export const readOrder = ({username}) => ajax({
+  url: '/read_order',
+  method: 'POST',
+  data: {
+    name:username
+  },
+  headers: {
+    needToken: false
+  }
+})
 
 /* 手机号验证码登陆 */
 export const loginWithPhone = ({phone, code}) => ajax({

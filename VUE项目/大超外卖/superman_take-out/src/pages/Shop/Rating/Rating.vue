@@ -92,7 +92,7 @@ export default {
   mounted() {
     this.$store.dispatch('getShopRatingsAction', () => {
       this.$nextTick(() => {
-        new BScroll(this.$refs.ratings, {
+        new BScroll('.ratings', {
           click: true
         })
       })

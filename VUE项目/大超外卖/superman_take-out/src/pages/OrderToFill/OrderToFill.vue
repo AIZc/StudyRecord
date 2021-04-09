@@ -24,19 +24,27 @@
       </ul>
     </div>
     <van-cell class="deliver" title="配送费" value="￥4" />
-    <van-submit-bar :price="totalprices*100" button-text="提交订单" @submit="onsubmit"/>
+    <van-submit-bar :price="totalprices*100" button-text="提交订单" @submit="show=true"/>
+    <div class="over"  v-show="show">
+      <img  class="pay" src="./pay.jpg" alt="">
+      <van-button type="info" class="btn modify" @click="show=false">修改信息</van-button>
+      <van-button type="primary" class="btn payFinall" @click="onsubmit" v-if="!loading">已经支付</van-button>
+      <van-button loading type="primary" class="btn payFinall" loading-text="下单中" v-else/>
+    <div/>
+  </div>
   </div>
 </template>
 
 <script>
 import Vue from 'vue'
-import { Field } from 'mint-ui'
-import {SubmitBar,Card,Cell} from 'vant'
+import {Field, MessageBox} from 'mint-ui'
+import {SubmitBar,Card,Cell,Button} from 'vant'
 import {mapGetters,mapState} from "vuex";
 Vue.component(Field.name,Field)
 Vue.use(SubmitBar)
 Vue.use(Card)
 Vue.use(Cell)
+Vue.use(Button)
 export default {
   name: "OrderToFill",
   data(){
@@ -44,7 +52,9 @@ export default {
       linkman:'',
       linkphone:'',
       site:'',
-      remark:''
+      remark:'',
+      show:false,
+      loading:false
     }
   },
   computed:{
@@ -66,18 +76,23 @@ export default {
       let {username,linkman,linkphone,site,remark,cartShops,totalprices} = this
       let result
       let orderConent = []
-      let orderfood = {}
-      cartShops.forEach(function (food) {
-        orderfood.count = food.count
-        orderfood.price = food.price
-        orderfood.name = food.name
-        orderfood.image = food.image
-        orderConent.push(orderfood)
+      cartShops.forEach((food) => {
+        orderConent.push(food)
       })
-      console.log(orderConent)
-      result = await this.$API.getOrder({username,linkman,linkphone,site,remark,totalprices,orderConent:orderConent})
+      result = await this.$API.addOrder({username,linkman,linkphone,site,remark,totalprices,orderConent:orderConent,shopName:this.info.name})
       console.log(result)
-      
+      if(result.code === 0){
+        // 登录成功
+        // 跳转页面
+        this.loading = true
+        setTimeout(()=>{
+          this.loading = false
+          MessageBox('提示','下单成功')
+          this.$router.replace('/order')
+        },1500)
+
+
+      }
     }
   }
 }
@@ -89,7 +104,7 @@ export default {
   width 375px
   height 667px
 .orderToFill
-  //bottom-border-1px(grey)
+
   position absolute
   width 90%
   top 45px
@@ -103,7 +118,7 @@ export default {
   position: fixed
   top: 6px
   left: 0
-  z-index 1005
+  z-index 1001
   .icon-arrow-left
     display: block
     padding: 5px
@@ -115,4 +130,25 @@ export default {
   width 31%
   bottom 0
   z-index 1000
+.over
+  position absolute
+  width 100%
+  height 100%
+  background-color: grey
+  opacity 0.9
+  z-index 1005
+  .pay
+    width 70%
+    position absolute
+    left 50%
+    top 15%
+    transform translateX(-50%)
+  .btn
+    position absolute
+    bottom 20%
+  .modify
+    left 20%
+  .payFinall
+    right 20%
+    width 100px
 </style>
